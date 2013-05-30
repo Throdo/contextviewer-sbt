@@ -1,0 +1,74 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.clusterBox {
+    float: left;
+    min-width: 250px;
+    min-height: 200px;
+    width: auto;
+    border: 2px double #000000;
+    background: bisque;
+    padding: 1em;
+    margin: 2em;
+}
+
+.clusterBox img {
+    float: right;
+}
+
+.connected {
+    background: #7A9437;
+}
+
+.notConnected {
+    background: brown;
+}
+
+.clusterTitle {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5em;
+    vertical-align: top;
+}
+
+.clusterText {
+    font-size: 1em;
+    display: block;;
+}
+
+.sweeper {
+    clear: both;
+}
+
+.bucketBox {
+    float : left;
+    min-width: 50px;
+    width: auto;
+    border: 1px dashed darkgray;
+    background: cornsilk;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.bucketBox img {
+    float: none;
+}
+
+.bucketTitle {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.75em;
+    vertical-align: top;
+}
+
+.bucketText {
+
+}

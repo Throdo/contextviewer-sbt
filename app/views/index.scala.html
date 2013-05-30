@@ -1,0 +1,36 @@
+@(title: String, orangeClusterMap: Map[String, OrangeCluster])
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.1.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>ContextViewer application is under development with @orangeClusterMap.size() OrangeCluster(s) !!!</h1>
+
+        <div class="clusterListBox">
+            <h2>Liste des Clusters</h2>
+            @for((key, cluster) <- orangeClusterMap) {
+                <div id = "@key" class="clusterBox @cluster.getStatus()">
+                    <img src="@routes.Assets.at("images/cluster-" + cluster.getStatus() + ".png")" />
+                    <span class="clusterTitle">@cluster.getLabel()</span>
+                    <span class="clusterText">@cluster.getUriList().toString()</span>
+                    @if(cluster.getStatus() == "connected") {
+                        <p class="clusterText">Liste des buckets disponibles</p>
+                        @for((keyB, bucket) <- cluster.getBucketMap()) {
+                            <div id = "@keyB" class="bucketBox @keyB">
+                                <img src="@routes.Assets.at("images/bucket-available.png")" />
+                                <p class="bucketTitle">@bucket.getLabel()</p>
+                            </div>
+                        }
+                    }
+                </div>
+            }
+            <div class="sweeper" />
+        </div>
+    </body>
+</html>
