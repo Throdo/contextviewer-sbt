@@ -2,7 +2,9 @@ package models;
 
 import com.couchbase.client.CouchbaseClient;
 import com.couchbase.client.protocol.views.*;
+import play.Logger;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +16,8 @@ import java.util.Map;
  * Time: 14:51
  */
 public class OrangeBucket {
+
+    private final static String designDocName = "display";
     private String id;
     private String label;
     private CouchbaseClient couchbaseClient;
@@ -35,10 +39,65 @@ public class OrangeBucket {
         this.bucketViews = bucketViews;
     }
 
-    public void fillBucketWithViews() {
+    public void fillBucketWithViews() throws Exception {
         // URL pour l'appel REST :
         // http://127.0.0.1:8091/pools/default/buckets/bucketName/ddocs
         // ex : http://127.0.0.1:8091/pools/default/buckets/beer-sample/ddocs
+
+        DesignDocument designDocument = null;
+        try {
+            designDocument = this.couchbaseClient.getDesignDocument(designDocName);
+            Logger.debug("Contenu du Design Document : " + designDocument.toJson());
+        } catch (InvalidViewException e) {
+            Logger.info("Impossible de trouver le DesignDocument 'display'. Il faut le créer !");
+
+            createDesignDocument();
+        }
+
+
+    }
+
+    private void createDesignDocument() throws Exception {
+        DesignDocument designDocument;List<ViewDesign> views = new ArrayList<ViewDesign>();
+        List<SpatialViewDesign> spviews = new ArrayList<SpatialViewDesign>();
+
+        ViewDesign allKeys = new ViewDesign(
+                "all_keys",
+                "function (doc, meta) {\n" +
+                        "  emit(meta.id, doc);\n" +
+                        "}");
+
+        views.add(allKeys);
+
+        SpatialViewDesign spview = new SpatialViewDesign(
+                "spatialfoo",
+                "function(map) {}"
+        );
+        spviews.add(spview);
+
+        designDocument = new DesignDocument(designDocName, views, spviews);
+
+        if (!this.couchbaseClient.createDesignDoc(designDocument)) {
+            throw new Exception("Impossible de créer le DesignDocument " + designDocName + "!");
+        }
+        ;
+
+        // TODO améliorer ce code pourri. Il faut un certain temps pour que le DesignDocument soit créer. Système de Synchronisation à mettre en place.
+        boolean foundDesignDoc = false;
+        int cpt=0;
+        while (!foundDesignDoc) {
+            try {
+                cpt++;
+                this.couchbaseClient.getDesignDocument(designDocName);
+                foundDesignDoc = true;
+                Logger.debug("Impossible de créer le DesignDocument " + designDocName + "!");
+            } catch (Exception e1) {
+                Thread.sleep(500);
+                if (cpt > 5) {
+                    throw new Exception("Impossible de créer le DesignDocument " + designDocName + "!");
+                }
+            }
+        }
     }
 
     public void fillBucketWithDocuments() {

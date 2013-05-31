@@ -1,14 +1,14 @@
 package com.orange.contextviewer.dao;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+import com.orange.contextviewer.dao.model.DesignDocumentResponse;
+import com.sun.jersey.api.NotFoundException;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.core.util.MultivaluedMapImpl;
 import play.Logger;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import javax.ws.rs.core.MultivaluedMap;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
@@ -40,12 +40,38 @@ public class RestClientDAO {
         String placeHolder = this.urlRestConsole + "default/buckets/%s/ddocs";
         String serviceRestToCall = String.format(placeHolder, bucket);
         Logger.debug("Url du Service Rest pour obtenir la liste des designdoc : " + serviceRestToCall);
-        Logger.debug(callRestService(serviceRestToCall));
+        Logger.debug(callJerseyRestService(serviceRestToCall).toString());
 
         return null;
     }
 
-    private String callRestService(String url) {
+    private DesignDocumentResponse callJerseyRestService (String url) {
+        String key="key";
+        String value="value";
+
+        Client client = Client.create();
+        WebResource webResource = client.resource(url);
+
+        final MultivaluedMap<String, String> params = new MultivaluedMapImpl();
+
+        params.add("key", key);
+        params.add("value", value);
+
+        final ClientResponse response = webResource.queryParams(params)
+                .accept("application/json").get(ClientResponse.class);
+
+        final DesignDocumentResponse bean = response
+                .getEntity(DesignDocumentResponse.class);
+
+        if ((bean.getItems() == null) || (bean.getItems().size() == 0)) {
+            throw new NotFoundException();
+        }
+
+        return bean;
+
+    }
+
+/*    private String callRestService(String url) {
 
         String output = null;
         DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -78,7 +104,7 @@ public class RestClientDAO {
         }
 
         return output;
-    }
+    }*/
 
     private String addPortToURI(URI uri, int port) {
         URI uriModified = null;

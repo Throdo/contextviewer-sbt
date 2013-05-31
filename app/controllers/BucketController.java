@@ -1,6 +1,5 @@
 package controllers;
 
-import com.orange.contextviewer.dao.RestClientDAO;
 import models.OrangeBucket;
 import models.OrangeCluster;
 import models.OrangeClusterManager;
@@ -21,10 +20,16 @@ public class BucketController extends Controller {
         OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(idCluster);
         OrangeBucket orangeBucket = orangeCluster.getBucketMap().get(idBucket);
 
-        //orangeBucket.fillBucketWithDocuments();
+        try {
+            orangeBucket.fillBucketWithViews();
+        } catch (Exception e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
 
+/*
         RestClientDAO restClientDAO = new RestClientDAO(orangeCluster.getUriList().get(0));
         restClientDAO.getDesignDocList(idBucket);
+*/
 
         return ok(bucketView.render("ContextViewer v0.1", orangeBucket));
     }

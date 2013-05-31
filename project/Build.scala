@@ -13,6 +13,8 @@ object ApplicationBuild extends Build {
     javaEbean ,
     "com.google.code.gson" % "gson" % "2.2.4" withSources(),
     "com.sun.jersey" % "jersey-client" % "1.17.1" withSources(),
+    "com.sun.jersey" % "jersey-core" % "1.17.1" withSources(),
+    "com.sun.jersey" % "jersey-bundle" % "1.17.1" withSources(),
     "org.hamcrest" % "hamcrest-all" % "1.3",
     "couchbase" % "couchbase-client" % "1.1.6"
   )
