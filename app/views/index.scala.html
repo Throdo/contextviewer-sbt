@@ -23,10 +23,13 @@
                         <p class="clusterText">Liste des buckets disponibles</p>
                         @for((keyB, bucket) <- cluster.getBucketMap()) {
                             <div id = "@keyB" class="bucketBox @keyB">
+                                <a href="@routes.BucketController.index(key, keyB)">
                                 <img src="@routes.Assets.at("images/bucket-available.png")" />
                                 <p class="bucketTitle">@bucket.getLabel()</p>
+                                </a>
                             </div>
                         }
+                        <a href="@routes.ClusterController.index(key)">Display Cluster content</a>
                     }
                 </div>
             }

@@ -12,6 +12,8 @@ resolvers += "Scala-Tools Maven2 Snapshots Repository" at "http://scala-tools.or
 
 resolvers += "Couchbase Repository" at "http://files.couchbase.com/maven2/"
 
+//resolvers += "Public online Restlet repositor" at "http://maven.restlet.org"
+
 resolvers += "Play 2.1.1 local Repository" at "file://home/throdo/Programmation/Binaires/Play2/play-2.1.1/repository/cache/"
 
 resolvers += "Maven 2 local Repository" at "file://home/throdo/.m2/repository/"

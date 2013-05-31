@@ -134,11 +134,13 @@ public class OrangeCluster {
         this.loginAdm = loginAdm;
         this.passwdAdm = passwdAdm;
         this.setClusterManager();
+
         if (this.clusterManager != null) {
             List<String> list = this.clusterManager.listBuckets();
             for (String s : list) {
 
                 this.bucketMap.put(s, new OrangeBucket(s, s, getCouchbaseClient(s)));
+
             }
         }
         Logger.debug("Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : " + this.toString());

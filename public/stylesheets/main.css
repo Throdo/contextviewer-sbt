@@ -72,3 +72,13 @@ html {
 .bucketText {
 
 }
+
+.bucketDetailedBox {
+    float : left;
+    min-height: 300px;
+    width: auto;
+    border: 1px solid #000000;
+    background: #898B5E;
+    padding: 2em;
+    margin: 2em;
+}
