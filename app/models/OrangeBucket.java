@@ -4,7 +4,6 @@ import com.couchbase.client.CouchbaseClient;
 import com.couchbase.client.protocol.views.*;
 import play.Logger;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,18 +16,44 @@ import java.util.Map;
  */
 public class OrangeBucket {
 
+    //TODO A mettre dans un properties de configuration
     private final static String designDocName = "display";
+    private final static String allKeysViewName = "all_keys";
+    private final static String allKeyViewCode = "function (doc, meta) {\n" +
+            "  emit(meta.id, null);\n" +
+            "}";
+
     private String id;
     private String label;
     private CouchbaseClient couchbaseClient;
     private Map<String, OrangeDocument> orangeDocuments;
     private List<BucketView> bucketViews;
+    private DesignDocument displayDesignDocument;
+    private ViewDesign allKeyView;
+    private Boolean status;
 
     public OrangeBucket(String id, String label, CouchbaseClient couchbaseClient) {
         this.id = id;
         this.label = label;
         this.couchbaseClient = couchbaseClient;
+        this.status = setDisplayDesignDocument();
         this.orangeDocuments = new HashMap<String, OrangeDocument>();
+    }
+
+    public DesignDocument getDisplayDesignDocument() {
+        return displayDesignDocument;
+    }
+
+    public void setDisplayDesignDocument(DesignDocument displayDesignDocument) {
+        this.displayDesignDocument = displayDesignDocument;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
     public List<BucketView> getBucketViews() {
@@ -39,58 +64,58 @@ public class OrangeBucket {
         this.bucketViews = bucketViews;
     }
 
-    public void fillBucketWithViews() throws Exception {
-        // URL pour l'appel REST :
-        // http://127.0.0.1:8091/pools/default/buckets/bucketName/ddocs
-        // ex : http://127.0.0.1:8091/pools/default/buckets/beer-sample/ddocs
-
+    public boolean setDisplayDesignDocument() {
         DesignDocument designDocument = null;
+        boolean excutionCode = false;
+
         try {
             designDocument = this.couchbaseClient.getDesignDocument(designDocName);
             Logger.debug("Contenu du Design Document : " + designDocument.toJson());
+            this.displayDesignDocument = designDocument;
+            excutionCode = true;
         } catch (InvalidViewException e) {
             Logger.info("Impossible de trouver le DesignDocument 'display'. Il faut le créer !");
-
-            createDesignDocument();
+            try {
+                createDesignDocument(allKeyViewCode);
+            } catch (Exception e1) {
+                e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
         }
 
-
+        if (excutionCode) {
+            List<ViewDesign> views = (List<ViewDesign>) designDocument.getViews();
+            ViewDesign viewDesign = new ViewDesign(allKeysViewName, allKeyViewCode);
+            if (views.contains(viewDesign)) {
+                int index = views.indexOf(viewDesign);
+                this.allKeyView = views.get(index);
+            }
+        }
+        return excutionCode;
     }
 
-    private void createDesignDocument() throws Exception {
-        DesignDocument designDocument;List<ViewDesign> views = new ArrayList<ViewDesign>();
-        List<SpatialViewDesign> spviews = new ArrayList<SpatialViewDesign>();
+    private void createDesignDocument(String jsonCodeView) throws Exception {
+        DesignDocument designDocument;
 
         ViewDesign allKeys = new ViewDesign(
-                "all_keys",
-                "function (doc, meta) {\n" +
-                        "  emit(meta.id, doc);\n" +
-                        "}");
+                allKeysViewName,
+                jsonCodeView);
 
-        views.add(allKeys);
-
-        SpatialViewDesign spview = new SpatialViewDesign(
-                "spatialfoo",
-                "function(map) {}"
-        );
-        spviews.add(spview);
-
-        designDocument = new DesignDocument(designDocName, views, spviews);
+        designDocument = new DesignDocument(designDocName);
+        designDocument.setView(allKeys);
 
         if (!this.couchbaseClient.createDesignDoc(designDocument)) {
             throw new Exception("Impossible de créer le DesignDocument " + designDocName + "!");
         }
-        ;
 
         // TODO améliorer ce code pourri. Il faut un certain temps pour que le DesignDocument soit créer. Système de Synchronisation à mettre en place.
         boolean foundDesignDoc = false;
-        int cpt=0;
+        int cpt = 0;
         while (!foundDesignDoc) {
             try {
                 cpt++;
                 this.couchbaseClient.getDesignDocument(designDocName);
                 foundDesignDoc = true;
-                Logger.debug("Impossible de créer le DesignDocument " + designDocName + "!");
+                Logger.debug("Création du DesignDocument " + designDocName + "!");
             } catch (Exception e1) {
                 Thread.sleep(500);
                 if (cpt > 5) {

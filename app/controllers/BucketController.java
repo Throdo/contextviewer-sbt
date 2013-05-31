@@ -20,12 +20,6 @@ public class BucketController extends Controller {
         OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(idCluster);
         OrangeBucket orangeBucket = orangeCluster.getBucketMap().get(idBucket);
 
-        try {
-            orangeBucket.fillBucketWithViews();
-        } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
 /*
         RestClientDAO restClientDAO = new RestClientDAO(orangeCluster.getUriList().get(0));
         restClientDAO.getDesignDocList(idBucket);
