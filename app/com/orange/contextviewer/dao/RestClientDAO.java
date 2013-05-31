@@ -65,10 +65,8 @@ public class RestClientDAO {
             BufferedReader br = new BufferedReader(
                     new InputStreamReader((response.getEntity().getContent())));
 
-            Logger.debug("Output from Server .... \n");
-
             while ((output = br.readLine()) != null) {
-                System.out.println(output);
+                Logger.debug(output);
             }
 
         } catch (ClientProtocolException e) {
