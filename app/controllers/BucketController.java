@@ -1,5 +1,6 @@
 package controllers;
 
+import com.orange.contextviewer.OrangeClusterManagerHandler;
 import models.OrangeBucket;
 import models.OrangeCluster;
 import models.OrangeClusterManager;
@@ -15,7 +16,7 @@ import play.mvc.Result;
  */
 public class BucketController extends Controller {
     public static Result index(String idCluster, String idBucket) {
-        OrangeClusterManager orangeClusterManager = new OrangeClusterManager();
+        OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getinstance();
         OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(idCluster);
         OrangeBucket orangeBucket = orangeCluster.getBucketMap().get(idBucket);
 

@@ -313,3 +313,75 @@ Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeCl
 2013-06-02 16:33:01,248 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
+2013-06-02 16:45:14,071 - [INFO] - from application in New I/O worker #6 
+Application shutdown...
+
+2013-06-02 16:45:14,235 - [INFO] - from application in New I/O worker #6 
+Application has started
+
+2013-06-02 16:45:14,238 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-02 16:45:14,240 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-02 16:45:14,246 - [DEBUG] - from application in New I/O worker #6 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-02 16:45:14,246 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-02 16:45:14,249 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-02 16:45:14,250 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-02 16:45:14,695 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-02 16:45:14,846 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-02 16:45:16,243 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : getCouchbaseClient() avec status = connected
+
+2013-06-02 16:45:16,434 - [DEBUG] - from application in New I/O worker #6 
+Contenu du Design Document : {"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
+
+2013-06-02 16:45:16,435 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : getCouchbaseClient(bucketName default)
+
+2013-06-02 16:45:16,697 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : getCouchbaseClient() avec status = connected
+
+2013-06-02 16:45:16,713 - [DEBUG] - from application in New I/O worker #6 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-02 16:45:16,714 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@a0d641, beer-sample=models.OrangeBucket@1527903}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@186f335}
+
+2013-06-02 16:45:16,732 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-02 16:45:16,735 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-02 16:45:16,753 - [ERROR] - from application in New I/O worker #6 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-02 16:45:16,753 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-02 16:45:16,754 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-02 16:45:16,760 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@a0d641, beer-sample=models.OrangeBucket@1527903}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@186f335}}}
+
+2013-06-02 16:45:16,760 - [INFO] - from play in New I/O worker #6 
+Application started (Dev)
+
+2013-06-02 16:45:38,953 - [DEBUG] - from application in play-akka.actor.default-dispatcher-19 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@a0d641, beer-sample=models.OrangeBucket@1527903}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@186f335}}}
+
