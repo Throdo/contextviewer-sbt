@@ -22,24 +22,26 @@ public class OrangeBucket {
     private final static String allKeyViewCode = "function (doc, meta) {\n" +
             "  emit(meta.id, null);\n" +
             "}";
-
+    // Propriété(s) de la Classe
     private String id;
     private String label;
     private CouchbaseClient couchbaseClient;
     private Map<String, OrangeDocument> orangeDocuments;
-    private List<BucketView> bucketViews;
+    //private List<BucketView> bucketViews;
     private DesignDocument displayDesignDocument;
     private ViewDesign allKeyView;
-    private Boolean status;
+    private String status;
 
+    // Constructeur(s)
     public OrangeBucket(String id, String label, CouchbaseClient couchbaseClient) {
         this.id = id;
         this.label = label;
         this.couchbaseClient = couchbaseClient;
-        this.status = setDisplayDesignDocument();
+        this.status = (setDisplayDesignDocument() ? "connected" : "notConnected");
         this.orangeDocuments = new HashMap<String, OrangeDocument>();
     }
 
+    // Getter(s) & Setter(s)
     public DesignDocument getDisplayDesignDocument() {
         return displayDesignDocument;
     }
@@ -48,21 +50,21 @@ public class OrangeBucket {
         this.displayDesignDocument = displayDesignDocument;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public List<BucketView> getBucketViews() {
+ /*    public List<BucketView> getBucketViews() {
         return bucketViews;
     }
 
     public void setBucketViews(List<BucketView> bucketViews) {
         this.bucketViews = bucketViews;
-    }
+    }*/
 
     public boolean setDisplayDesignDocument() {
         DesignDocument designDocument = null;

@@ -21,11 +21,11 @@
                     <span class="clusterText">@cluster.getUriList().toString()</span>
                     @if(cluster.getStatus() == "connected") {
                         <p class="clusterText">Liste des buckets disponibles</p>
-                        @for((keyB, bucket) <- cluster.getBucketMap()) {
-                            <div id = "@keyB" class="bucketBox @keyB">
+                        @for((keyB, bucket: OrangeBucket) <- cluster.getBucketMap()) {
+                            <div id = "@keyB" class="bucketBox @bucket.getStatus()">
                                 <a href="@routes.BucketController.index(key, keyB)">
-                                <img src="@routes.Assets.at("images/bucket-available.png")" />
-                                <p class="bucketTitle">@bucket.getLabel()</p>
+                                    <img src="@routes.Assets.at("images/bucket-available.png")" />
+                                    <p class="bucketTitle">@bucket.getLabel()</p>
                                 </a>
                             </div>
                         }
