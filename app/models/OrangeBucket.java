@@ -22,14 +22,23 @@ public class OrangeBucket {
     private final static String allKeyViewCode = "function (doc, meta) {\n" +
             "  emit(meta.id, null);\n" +
             "}";
+
+    private final static String documentContentViewName = "document_content";
+    private final static String documentContentViewCode = "function (doc, meta) {\n" +
+            "  if (meta.id)\n" +
+            "  {\n" +
+            "     emit(meta.id, doc);\n" +
+            "  }\n" +
+            "}";
+
     // Propriété(s) de la Classe
     private String id;
     private String label;
     private CouchbaseClient couchbaseClient;
     private Map<String, OrangeDocument> orangeDocuments;
-    //private List<BucketView> bucketViews;
     private DesignDocument displayDesignDocument;
     private ViewDesign allKeyView;
+    //TODO C'est dégueulasse de mettre le status à connected ou notConnected. Utiliser un booléen et laisser la partie view le transformer dans la bonne classe CSS.
     private String status;
 
     // Constructeur(s)
@@ -37,6 +46,7 @@ public class OrangeBucket {
         this.id = id;
         this.label = label;
         this.couchbaseClient = couchbaseClient;
+        // A changer cf. le "à faire" ci-dessus
         this.status = (setDisplayDesignDocument() ? "connected" : "notConnected");
         this.orangeDocuments = new HashMap<String, OrangeDocument>();
     }
@@ -57,14 +67,6 @@ public class OrangeBucket {
     public void setStatus(String status) {
         this.status = status;
     }
-
- /*    public List<BucketView> getBucketViews() {
-        return bucketViews;
-    }
-
-    public void setBucketViews(List<BucketView> bucketViews) {
-        this.bucketViews = bucketViews;
-    }*/
 
     public boolean setDisplayDesignDocument() {
         DesignDocument designDocument = null;
@@ -95,6 +97,16 @@ public class OrangeBucket {
         return excutionCode;
     }
 
+    private void createDocumentContentView() throws Exception {
+
+        ViewDesign documentContentView = new ViewDesign(
+                documentContentViewName,
+                documentContentViewCode);
+
+        this.displayDesignDocument.setView(documentContentView);
+
+    }
+
     private void createDesignDocument(String jsonCodeView) throws Exception {
         DesignDocument designDocument;
 
@@ -118,6 +130,7 @@ public class OrangeBucket {
                 this.couchbaseClient.getDesignDocument(designDocName);
                 foundDesignDoc = true;
                 Logger.debug("Création du DesignDocument " + designDocName + "!");
+                this.createDocumentContentView();
             } catch (Exception e1) {
                 Thread.sleep(500);
                 if (cpt > 5) {
@@ -131,7 +144,7 @@ public class OrangeBucket {
         // Create connection if needed
 
         try {
-            View view = this.couchbaseClient.getView("display", "all_documents");
+            View view = this.couchbaseClient.getView(designDocName, allKeysViewName);
             Query query = new Query();
             query.setIncludeDocs(true).setLimit(20);
             query.setStale(Stale.FALSE);
@@ -141,7 +154,7 @@ public class OrangeBucket {
                 String key = row.getKey(); // deal with the document/data
                 String value = row.getValue(); // deal with the document/data
 
-                OrangeDocument document = new OrangeDocument(key, value);
+                OrangeDocument document = new OrangeDocument(key, null);
                 this.orangeDocuments.put(key, document);
 
             }
@@ -180,5 +193,48 @@ public class OrangeBucket {
 
     public void setCouchbaseClient(CouchbaseClient couchbaseClient) {
         this.couchbaseClient = couchbaseClient;
+    }
+
+    public void refreshBucketInformations() {
+        this.status = (setDisplayDesignDocument() ? "connected" : "notConnected");
+    }
+
+    private OrangeDocument fillDocumentContent(String idDocument) {
+        OrangeDocument documentFound = null;
+        try {
+            View view = this.couchbaseClient.getView(designDocName, documentContentViewName);
+            Query query = new Query();
+            query.setIncludeDocs(true).setLimit(20);
+            query.setStale(Stale.FALSE);
+            ViewResponse result = this.couchbaseClient.query(view, query);
+
+            for (ViewRow row : result) {
+                String key = row.getKey(); // deal with the document/data
+                String value = row.getValue(); // deal with the document/data
+
+                documentFound = new OrangeDocument(key, value);
+                this.orangeDocuments.put(key, documentFound);
+                Logger.debug("Document Key : " + key + " - Document Content : " + value + " trouvé !!!");
+
+            }
+        } catch (InvalidViewException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return documentFound;
+    }
+
+    public OrangeDocument getOrangeDocumentContent(String idDocument) {
+        OrangeDocument foundDocument;
+        if (this.orangeDocuments.containsKey(idDocument)) {
+            foundDocument = this.orangeDocuments.get(idDocument);
+            if (foundDocument.getContent() == null) {
+                foundDocument = this.fillDocumentContent(idDocument);
+            }
+        } else {
+            foundDocument = this.fillDocumentContent(idDocument);
+        }
+
+        return foundDocument;  //To change body of created methods use File | Settings | File Templates.
     }
 }

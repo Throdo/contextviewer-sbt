@@ -3,9 +3,10 @@
 # ~~~~
 
 # Home page
-GET     /contextViewer                      controllers.ContextViewer.index()
-GET     /cluster/:id                        controllers.ClusterController.index(id: String)
-GET     /bucket/:idCluster/:idBucket        controllers.BucketController.index(idCluster: String, idBucket: String)
+GET     /contextViewer                                  controllers.ContextViewer.index()
+GET     /cluster/:id                                    controllers.ClusterController.index(id: String)
+GET     /bucket/:idCluster/:idBucket                    controllers.BucketController.index(idCluster: String, idBucket: String)
+GET     /document/:idCluster/:idBucket/:idDocument      controllers.DocumentController.index(idCluster: String, idBucket: String, idDocument: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

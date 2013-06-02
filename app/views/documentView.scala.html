@@ -1,0 +1,23 @@
+@(title: String, idCluster: String, idBucket: String, document: OrangeDocument)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.1.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>ContextViewer application - Document View with @document.getId</h1>
+
+        <div class="documentDetailedBox">
+            <img src="@routes.Assets.at("images/document.png")" />
+            <h3>Contenu : @document.getContent()</h3>
+            <div class="sweeper" />
+        </div>
+        <a href="@routes.BucketController.index(idCluster, idBucket)">Retour à la vue Bucket</a>
+
+    </body>
+</html>

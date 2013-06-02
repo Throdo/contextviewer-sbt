@@ -1,4 +1,4 @@
-@(title: String, bucket: OrangeBucket)
+@(title: String, idCluster: String, bucket: OrangeBucket)
 
 <!DOCTYPE html>
 
@@ -14,14 +14,15 @@
 
         <div class="bucketDetailedBox">
             <img src="@routes.Assets.at("images/bucket.png")" />
-            @for((key, document) <- bucket.getOrangeDocuments()) {
+            @for((key, document: OrangeDocument) <- bucket.getOrangeDocuments()) {
                 <ul>
-                    <li>@key : @document.getJsonValue()</li>
+                    <li>@key
+                        : <a href="@routes.DocumentController.index(idCluster, bucket.getId(), key)">en savoir plus ...</a></li>
                 </ul>
             }
             <div class="sweeper" />
         </div>
-
+        <a href="@routes.ClusterController.index(idCluster)">Retour à la vue Cluster</a>
 
     </body>
 </html>

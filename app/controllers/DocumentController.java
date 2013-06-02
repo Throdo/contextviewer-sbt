@@ -4,9 +4,10 @@ import com.orange.contextviewer.OrangeClusterManagerHandler;
 import models.OrangeBucket;
 import models.OrangeCluster;
 import models.OrangeClusterManager;
+import models.OrangeDocument;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.bucketView;
+import views.html.documentView;
 
 
 /**
@@ -15,18 +16,17 @@ import views.html.bucketView;
  * Date: 19/05/13
  * Time: 09:03
  */
-public class BucketController extends Controller {
-    public static Result index(String idCluster, String idBucket) {
+public class DocumentController extends Controller {
+    public static Result index(String idCluster, String idBucket, String idDocument) {
         OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getinstance();
         OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(idCluster);
         OrangeBucket orangeBucket = orangeCluster.getBucketMap().get(idBucket);
-
-        orangeBucket.fillBucketWithDocuments();
+        OrangeDocument orangeDocument = orangeBucket.getOrangeDocumentContent(idDocument);
 /*
         RestClientDAO restClientDAO = new RestClientDAO(orangeCluster.getUriList().get(0));
         restClientDAO.getDesignDocList(idBucket);
 */
 
-        return ok(bucketView.render("ContextViewer v0.1", idCluster, orangeBucket));
+        return ok(documentView.render("ContextViewer v0.1", idCluster, idBucket, orangeDocument));
     }
 }

@@ -8,11 +8,11 @@ package models;
  */
 public class OrangeDocument {
     private String id;
-    private String jsonValue;
+    private String content;
 
-    public OrangeDocument(String id, String jsonValue) {
+    public OrangeDocument(String id, String content) {
         this.id = id;
-        this.jsonValue = jsonValue;
+        this.content = content;
     }
 
     public String getId() {
@@ -23,11 +23,11 @@ public class OrangeDocument {
         this.id = id;
     }
 
-    public String getJsonValue() {
-        return jsonValue;
+    public String getContent() {
+        return content;
     }
 
-    public void setJsonValue(String jsonValue) {
-        this.jsonValue = jsonValue;
+    public void setContent(String content) {
+        this.content = content;
     }
 }
