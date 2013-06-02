@@ -1,1833 +1,315 @@
-2013-05-31 16:01:59,194 - [INFO] - from play in main 
+2013-06-02 16:22:44,196 - [INFO] - from play in main 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2013-05-31 16:02:12,164 - [INFO] - from play in New I/O worker #1 
+2013-06-02 16:22:52,516 - [INFO] - from application in New I/O worker #1 
+Application has started
+
+2013-06-02 16:22:52,565 - [INFO] - from play in New I/O worker #1 
 Application started (Dev)
 
-2013-05-31 16:02:18,659 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:53,827 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-05-31 16:02:18,673 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:53,830 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-05-31 16:02:19,247 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:54,159 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-05-31 16:02:19,248 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:54,159 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-05-31 16:02:19,252 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:54,163 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-05-31 16:02:19,258 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:54,164 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Entreé dans la méthode : setClusterManager()
 
-2013-05-31 16:02:19,748 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie de la méthode : setClusterManager() avec status = connected
+2013-06-02 16:22:54,450 - [ERROR] - from application in play-akka.actor.default-dispatcher-3 
+class java.lang.RuntimeException : Unable to connect to cluster
 
-2013-05-31 16:02:19,884 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:02:21,234 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:21,237 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:02:21,462 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:21,462 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@10d279d, beer-sample=models.OrangeBucket@ae61a9}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@daa662}
-
-2013-05-31 16:02:21,463 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:02:21,463 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:02:21,472 - [ERROR] - from application in play-akka.actor.default-dispatcher-7 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 16:02:21,474 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:54,451 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-05-31 16:02:21,474 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:22:54,451 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}
+
+2013-06-02 16:22:54,454 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-02 16:22:54,455 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-02 16:22:54,456 - [ERROR] - from application in play-akka.actor.default-dispatcher-3 
+class java.lang.RuntimeException : Unable to connect to cluster
+
+2013-06-02 16:22:54,456 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-02 16:22:54,456 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-05-31 16:02:21,479 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@10d279d, beer-sample=models.OrangeBucket@ae61a9}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@daa662}}}
+2013-06-02 16:22:54,458 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:02:21,479 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@10d279d, beer-sample=models.OrangeBucket@ae61a9}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@daa662}}}
+2013-06-02 16:22:54,459 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:02:25,555 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,048 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-05-31 16:02:25,556 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,049 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-05-31 16:02:25,558 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,051 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-05-31 16:02:25,558 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,051 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-05-31 16:02:25,558 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,051 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-05-31 16:02:25,558 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,051 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans la méthode : setClusterManager()
 
-2013-05-31 16:02:25,593 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie de la méthode : setClusterManager() avec status = connected
+2013-06-02 16:25:06,052 - [ERROR] - from application in play-akka.actor.default-dispatcher-5 
+class java.lang.RuntimeException : Unable to connect to cluster
 
-2013-05-31 16:02:25,664 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:02:26,037 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:26,038 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:02:26,286 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:26,286 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@b0fb0e, beer-sample=models.OrangeBucket@1327343}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@12d3766}
-
-2013-05-31 16:02:26,287 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:02:26,287 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:02:26,292 - [ERROR] - from application in play-akka.actor.default-dispatcher-7 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 16:02:26,293 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,053 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-05-31 16:02:26,293 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
+2013-06-02 16:25:06,053 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}
+
+2013-06-02 16:25:06,053 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-02 16:25:06,054 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-02 16:25:06,054 - [ERROR] - from application in play-akka.actor.default-dispatcher-5 
+class java.lang.RuntimeException : Unable to connect to cluster
+
+2013-06-02 16:25:06,055 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-02 16:25:06,055 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-05-31 16:02:26,293 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@b0fb0e, beer-sample=models.OrangeBucket@1327343}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@12d3766}}}
+2013-06-02 16:25:06,055 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:02:26,378 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-{"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
+2013-06-02 16:25:06,055 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:02:26,396 - [DEBUG] - from application in play-akka.actor.default-dispatcher-7 
-Url du Service Rest pour obtenir la liste des designdoc : http://localhost:8091/pools/default/buckets/beer-sample/ddocs
+2013-06-02 16:29:40,665 - [INFO] - from application in New I/O worker #2 
+Application shutdown...
 
-2013-05-31 16:02:28,862 - [ERROR] - from application in play-internal-execution-context-1 
+2013-06-02 16:29:40,995 - [INFO] - from application in New I/O worker #2 
+Application has started
 
-
-! @6een6lmlp - Internal server error, for (GET) [/bucket/localhost/beer-sample] ->
-
-play.api.Application$$anon$1: Execution exception[[WebApplicationException: com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 13 counts of IllegalAnnotationExceptions
-Class has two properties of the same name "items"
-	this problem is related to the following location:
-		at public java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.getItems()
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "controllers"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.getControllers()
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "doc"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.getDoc()
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "controllers"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.getControllers()
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "doc"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.getDoc()
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "id"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Meta.getId()
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Meta.id
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "rev"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Meta.getRev()
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Meta.rev
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "language"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.JsonRecord.getLanguage()
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.JsonRecord.language
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "viewsObjectMap"
-	this problem is related to the following location:
-		at public java.util.Map com.orange.contextviewer.dao.model.JsonRecord.getViewsObjectMap()
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "map"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.ViewsObject.getMap()
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.ViewsObject.map
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "reduce"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.ViewsObject.getReduce()
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.ViewsObject.reduce
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "compact"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Controller.getCompact()
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Controller.compact
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "setUpdateMinChanges"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Controller.getSetUpdateMinChanges()
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Controller.setUpdateMinChanges
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.1]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anon$2$$anonfun$handle$1.apply(PlayDefaultUpstreamHandler.scala:144) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anon$2$$anonfun$handle$1.apply(PlayDefaultUpstreamHandler.scala:140) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.1]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
-	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
-javax.ws.rs.WebApplicationException: com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 13 counts of IllegalAnnotationExceptions
-Class has two properties of the same name "items"
-	this problem is related to the following location:
-		at public java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.getItems()
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "controllers"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.getControllers()
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "doc"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.getDoc()
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "controllers"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.getControllers()
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "doc"
-	this problem is related to the following location:
-		at public com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.getDoc()
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "id"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Meta.getId()
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Meta.id
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "rev"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Meta.getRev()
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Meta.rev
-		at com.orange.contextviewer.dao.model.Meta
-		at private com.orange.contextviewer.dao.model.Meta com.orange.contextviewer.dao.model.Document.doc
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "language"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.JsonRecord.getLanguage()
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.JsonRecord.language
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "viewsObjectMap"
-	this problem is related to the following location:
-		at public java.util.Map com.orange.contextviewer.dao.model.JsonRecord.getViewsObjectMap()
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "map"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.ViewsObject.getMap()
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.ViewsObject.map
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "reduce"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.ViewsObject.getReduce()
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.ViewsObject.reduce
-		at com.orange.contextviewer.dao.model.ViewsObject
-		at private java.util.Map com.orange.contextviewer.dao.model.JsonRecord.viewsObjectMap
-		at com.orange.contextviewer.dao.model.JsonRecord
-		at private com.orange.contextviewer.dao.model.JsonRecord com.orange.contextviewer.dao.model.Document.controllers
-		at com.orange.contextviewer.dao.model.Document
-		at private com.orange.contextviewer.dao.model.Document com.orange.contextviewer.dao.model.DesignDocument.doc
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "compact"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Controller.getCompact()
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Controller.compact
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-Class has two properties of the same name "setUpdateMinChanges"
-	this problem is related to the following location:
-		at public java.lang.String com.orange.contextviewer.dao.model.Controller.getSetUpdateMinChanges()
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-	this problem is related to the following location:
-		at private java.lang.String com.orange.contextviewer.dao.model.Controller.setUpdateMinChanges
-		at com.orange.contextviewer.dao.model.Controller
-		at private com.orange.contextviewer.dao.model.Controller com.orange.contextviewer.dao.model.DesignDocument.controllers
-		at com.orange.contextviewer.dao.model.DesignDocument
-		at private java.util.List com.orange.contextviewer.dao.model.DesignDocumentResponse.items
-		at com.orange.contextviewer.dao.model.DesignDocumentResponse
-
-	at com.sun.jersey.core.provider.jaxb.AbstractRootElementProvider.readFrom(AbstractRootElementProvider.java:115) ~[jersey-core-1.17.1.jar:1.17.1]
-	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:565) ~[jersey-client-1.17.1.jar:1.17.1]
-	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:517) ~[jersey-client-1.17.1.jar:1.17.1]
-	at com.orange.contextviewer.dao.RestClientDAO.callJerseyRestService(RestClientDAO.java:63) ~[na:na]
-	at com.orange.contextviewer.dao.RestClientDAO.getDesignDocList(RestClientDAO.java:43) ~[na:na]
-	at controllers.BucketController.index(BucketController.java:27) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:73) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:73) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:164) ~[play_2.10.jar:2.1.1]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:345) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) ~[play_2.10.jar:2.1.1]
-	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) ~[play_2.10.jar:2.1.1]
-	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) ~[akka-actor_2.10.jar:na]
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) ~[akka-actor_2.10.jar:na]
-	at akka.actor.ActorCell.invoke(ActorCell.scala:386) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.Mailbox.run(Mailbox.scala:212) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-Caused by: com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 13 counts of IllegalAnnotationExceptions
-	at com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:91) ~[na:1.7.0_21]
-	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:451) ~[na:1.7.0_21]
-	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:283) ~[na:1.7.0_21]
-	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:126) ~[na:1.7.0_21]
-	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1148) ~[na:1.7.0_21]
-	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:130) ~[na:1.7.0_21]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.7.0_21]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[na:1.7.0_21]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.7.0_21]
-	at java.lang.reflect.Method.invoke(Method.java:601) ~[na:1.7.0_21]
-	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:248) ~[na:1.7.0_21]
-	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:235) ~[na:1.7.0_21]
-	at javax.xml.bind.ContextFinder.find(ContextFinder.java:445) ~[na:1.7.0_21]
-	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:637) ~[na:1.7.0_21]
-	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584) ~[na:1.7.0_21]
-	at com.sun.jersey.core.provider.jaxb.AbstractJAXBProvider.getStoredJAXBContext(AbstractJAXBProvider.java:194) ~[jersey-core-1.17.1.jar:1.17.1]
-	at com.sun.jersey.core.provider.jaxb.AbstractJAXBProvider.getJAXBContext(AbstractJAXBProvider.java:187) ~[jersey-core-1.17.1.jar:1.17.1]
-	at com.sun.jersey.core.provider.jaxb.AbstractJAXBProvider.getUnmarshaller(AbstractJAXBProvider.java:139) ~[jersey-core-1.17.1.jar:1.17.1]
-	at com.sun.jersey.core.provider.jaxb.AbstractJAXBProvider.getUnmarshaller(AbstractJAXBProvider.java:122) ~[jersey-core-1.17.1.jar:1.17.1]
-	at com.sun.jersey.core.provider.jaxb.AbstractRootElementProvider.readFrom(AbstractRootElementProvider.java:111) ~[jersey-core-1.17.1.jar:1.17.1]
-	... 23 common frames omitted
-
-2013-05-31 16:02:53,778 - [INFO] - from play in New I/O worker #1 
+2013-06-02 16:29:40,998 - [INFO] - from play in New I/O worker #2 
 Application started (Dev)
 
-2013-05-31 16:02:53,825 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,035 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-05-31 16:02:53,828 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,039 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-05-31 16:02:53,854 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,046 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-05-31 16:02:53,855 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,047 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-05-31 16:02:53,859 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,050 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-05-31 16:02:53,860 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,051 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Entreé dans la méthode : setClusterManager()
 
-2013-05-31 16:02:53,900 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie de la méthode : setClusterManager() avec status = connected
+2013-06-02 16:29:41,053 - [ERROR] - from application in play-akka.actor.default-dispatcher-5 
+class java.lang.RuntimeException : Unable to connect to cluster
 
-2013-05-31 16:02:53,976 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:02:54,171 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:54,171 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:02:54,370 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:54,373 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@19d9dd6, beer-sample=models.OrangeBucket@e58d07}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@8e038c}
-
-2013-05-31 16:02:54,374 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:02:54,375 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:02:54,381 - [ERROR] - from application in play-akka.actor.default-dispatcher-6 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 16:02:54,381 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,053 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-05-31 16:02:54,385 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:29:41,054 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}
+
+2013-06-02 16:29:41,054 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-02 16:29:41,054 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-02 16:29:41,055 - [ERROR] - from application in play-akka.actor.default-dispatcher-5 
+class java.lang.RuntimeException : Unable to connect to cluster
+
+2013-06-02 16:29:41,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-02 16:29:41,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-05-31 16:02:54,386 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@19d9dd6, beer-sample=models.OrangeBucket@e58d07}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@8e038c}}}
+2013-06-02 16:29:41,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:02:54,402 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-{"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
+2013-06-02 16:29:41,057 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:02:54,980 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,868 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-05-31 16:02:54,980 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,868 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-05-31 16:02:54,982 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,872 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-05-31 16:02:54,983 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,872 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-05-31 16:02:54,983 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,873 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-05-31 16:02:54,983 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,873 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 Entreé dans la méthode : setClusterManager()
 
-2013-05-31 16:02:55,022 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Sortie de la méthode : setClusterManager() avec status = connected
+2013-06-02 16:31:42,875 - [ERROR] - from application in play-akka.actor.default-dispatcher-9 
+class java.lang.RuntimeException : Unable to connect to cluster
 
-2013-05-31 16:02:55,092 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:02:55,873 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:55,873 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:02:56,043 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:02:56,043 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@1ca5ddf, beer-sample=models.OrangeBucket@d90b94}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1872a30}
-
-2013-05-31 16:02:56,367 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:02:56,367 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:02:56,373 - [ERROR] - from application in play-akka.actor.default-dispatcher-11 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 16:02:56,373 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,875 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-05-31 16:02:56,373 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+2013-06-02 16:31:42,875 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}
+
+2013-06-02 16:31:42,875 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-02 16:31:42,876 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-02 16:31:42,877 - [ERROR] - from application in play-akka.actor.default-dispatcher-9 
+class java.lang.RuntimeException : Unable to connect to cluster
+
+2013-06-02 16:31:42,877 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-02 16:31:42,877 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-05-31 16:02:56,374 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@1ca5ddf, beer-sample=models.OrangeBucket@d90b94}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1872a30}}}
+2013-06-02 16:31:42,877 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:02:56,987 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-{"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
+2013-06-02 16:31:42,878 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:03:01,173 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,392 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-05-31 16:03:01,173 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,392 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-05-31 16:03:01,175 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,394 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-05-31 16:03:01,176 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,395 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-05-31 16:03:01,177 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,395 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-05-31 16:03:01,177 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,395 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 Entreé dans la méthode : setClusterManager()
 
-2013-05-31 16:03:01,439 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Sortie de la méthode : setClusterManager() avec status = connected
+2013-06-02 16:31:50,396 - [ERROR] - from application in play-akka.actor.default-dispatcher-6 
+class java.lang.RuntimeException : Unable to connect to cluster
 
-2013-05-31 16:03:01,520 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:03:01,720 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:03:01,720 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:03:01,930 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:03:01,931 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@16791c7, beer-sample=models.OrangeBucket@93b0f3}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@462d19}
-
-2013-05-31 16:03:01,931 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:03:01,931 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:03:01,936 - [ERROR] - from application in play-akka.actor.default-dispatcher-13 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 16:03:01,937 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,396 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-05-31 16:03:01,937 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
+2013-06-02 16:31:50,397 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}
+
+2013-06-02 16:31:50,397 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-02 16:31:50,397 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-02 16:31:50,398 - [ERROR] - from application in play-akka.actor.default-dispatcher-6 
+class java.lang.RuntimeException : Unable to connect to cluster
+
+2013-06-02 16:31:50,398 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-02 16:31:50,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-05-31 16:03:01,937 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@16791c7, beer-sample=models.OrangeBucket@93b0f3}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@462d19}}}
+2013-06-02 16:31:50,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:03:01,960 - [DEBUG] - from application in play-akka.actor.default-dispatcher-13 
-{"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
+2013-06-02 16:31:50,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 
-2013-05-31 16:03:41,962 - [INFO] - from play in New I/O worker #5 
+2013-06-02 16:32:55,661 - [INFO] - from application in New I/O worker #2 
+Application shutdown...
+
+2013-06-02 16:32:55,839 - [INFO] - from application in New I/O worker #2 
+Application has started
+
+2013-06-02 16:32:55,840 - [INFO] - from play in New I/O worker #2 
 Application started (Dev)
 
-2013-05-31 16:03:41,989 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:33:01,233 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-05-31 16:03:41,992 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:33:01,236 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-05-31 16:03:41,997 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:33:01,240 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-05-31 16:03:41,998 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:33:01,241 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-05-31 16:03:42,001 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:33:01,243 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-05-31 16:03:42,002 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:33:01,243 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Entreé dans la méthode : setClusterManager()
 
-2013-05-31 16:03:42,048 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie de la méthode : setClusterManager() avec status = connected
+2013-06-02 16:33:01,244 - [ERROR] - from application in play-akka.actor.default-dispatcher-14 
+class java.lang.RuntimeException : Unable to connect to cluster
 
-2013-05-31 16:03:42,130 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:03:42,313 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:03:42,313 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:03:42,489 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:03:42,490 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@bb893a, beer-sample=models.OrangeBucket@2e4978}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@d977d6}
-
-2013-05-31 16:03:42,490 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:03:42,490 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:03:42,495 - [ERROR] - from application in play-akka.actor.default-dispatcher-6 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 16:03:42,496 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
+2013-06-02 16:33:01,245 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-05-31 16:03:42,496 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+2013-06-02 16:33:01,245 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}
 
-2013-05-31 16:03:42,496 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@bb893a, beer-sample=models.OrangeBucket@2e4978}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@d977d6}}}
-
-2013-05-31 16:03:42,506 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-Contenu du Design Document : {"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
-
-2013-05-31 16:51:46,420 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 16:51:46,473 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 16:51:46,486 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 16:51:46,487 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 16:51:46,487 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:51:46,487 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:51:46,514 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 16:51:46,578 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:51:46,737 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:51:46,738 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:51:46,891 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:51:46,891 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@87e4ec, beer-sample=models.OrangeBucket@1c64b75}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@183fa84}
-
-2013-05-31 16:51:46,891 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
+2013-06-02 16:33:01,245 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-05-31 16:51:46,891 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
+2013-06-02 16:33:01,246 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Entreé dans la méthode : setClusterManager()
 
-2013-05-31 16:51:46,893 - [ERROR] - from application in play-akka.actor.default-dispatcher-16 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+2013-06-02 16:33:01,247 - [ERROR] - from application in play-akka.actor.default-dispatcher-14 
+class java.lang.RuntimeException : Unable to connect to cluster
 
-2013-05-31 16:51:46,894 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
+2013-06-02 16:33:01,247 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-05-31 16:51:46,894 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
+2013-06-02 16:33:01,247 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-05-31 16:51:46,894 - [DEBUG] - from application in play-akka.actor.default-dispatcher-16 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@87e4ec, beer-sample=models.OrangeBucket@1c64b75}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@183fa84}}}
-
-2013-05-31 16:51:46,976 - [ERROR] - from application in play-internal-execution-context-4 
-
-
-! @6eend84jg - Internal server error, for (GET) [/bucket/localhost/default] ->
-
-play.api.Application$$anon$1: Execution exception[[InvalidViewException: Could not load design document "display"]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.1]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anon$2$$anonfun$handle$1.apply(PlayDefaultUpstreamHandler.scala:144) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anon$2$$anonfun$handle$1.apply(PlayDefaultUpstreamHandler.scala:140) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.1]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
-	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
-com.couchbase.client.protocol.views.InvalidViewException: Could not load design document "display"
-	at com.couchbase.client.CouchbaseClient.getDesignDocument(CouchbaseClient.java:540) ~[couchbase-client-1.1.6.jar:1.1.6]
-	at models.OrangeBucket.fillBucketWithViews(OrangeBucket.java:44) ~[na:na]
-	at controllers.BucketController.index(BucketController.java:23) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:73) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(routes_routing.scala:73) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:164) ~[play_2.10.jar:2.1.1]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:345) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) ~[play_2.10.jar:2.1.1]
-	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) ~[play_2.10.jar:2.1.1]
-	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) ~[akka-actor_2.10.jar:na]
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) ~[akka-actor_2.10.jar:na]
-	at akka.actor.ActorCell.invoke(ActorCell.scala:386) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.Mailbox.run(Mailbox.scala:212) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-05-31 16:53:17,659 - [INFO] - from play in New I/O worker #5 
-Application started (Dev)
-
-2013-05-31 16:53:17,711 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 16:53:17,728 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 16:53:17,733 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 16:53:17,733 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 16:53:17,735 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:53:17,735 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:53:17,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 16:53:17,815 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 16:53:17,971 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:53:17,972 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 16:53:18,152 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 16:53:18,152 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@7a52e4, beer-sample=models.OrangeBucket@d817ce}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@102e533}
-
-2013-05-31 16:53:18,153 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 16:53:18,153 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 16:53:18,155 - [ERROR] - from application in play-akka.actor.default-dispatcher-17 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 16:53:18,155 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 16:53:18,156 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 16:53:18,156 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@7a52e4, beer-sample=models.OrangeBucket@d817ce}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@102e533}}}
-
-2013-05-31 16:53:18,161 - [INFO] - from application in play-akka.actor.default-dispatcher-17 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer
-
-2013-05-31 17:02:04,538 - [ERROR] - from application in New I/O worker #3 
-
-
-! @6eeneh88g - Internal server error, for (GET) [/contextViewer] ->
-
-sbt.PlayExceptions$CompilationException: Compilation error[error: unreported exception Exception; must be caught or declared to be thrown]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
-	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
-	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
-	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
-	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
-	at play.core.ReloadableApplication.get(ApplicationProvider.scala:98) ~[play_2.10.jar:2.1.1]
-	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
-	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
-	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
-	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
-	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
-	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
-	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
-	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
-
-2013-05-31 17:02:06,971 - [ERROR] - from application in New I/O worker #6 
-
-
-! @6eenehbo1 - Internal server error, for (GET) [/bucket/localhost/default] ->
-
-sbt.PlayExceptions$CompilationException: Compilation error[error: unreported exception Exception; must be caught or declared to be thrown]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
-	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
-	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
-	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
-	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
-	at play.core.ReloadableApplication.get(ApplicationProvider.scala:98) ~[play_2.10.jar:2.1.1]
-	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
-	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
-	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
-	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
-	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
-	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
-	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
-	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
-
-2013-05-31 17:02:58,087 - [INFO] - from play in New I/O worker #6 
-Application started (Dev)
-
-2013-05-31 17:02:58,124 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 17:02:58,144 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 17:02:58,168 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 17:02:58,169 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 17:02:58,173 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:02:58,174 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:02:58,213 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 17:02:58,279 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 17:02:58,442 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:02:58,442 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 17:02:58,626 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:02:58,626 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@986143, beer-sample=models.OrangeBucket@1992bc}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@f0830d}
-
-2013-05-31 17:02:58,627 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:02:58,627 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:02:58,636 - [ERROR] - from application in play-akka.actor.default-dispatcher-18 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 17:02:58,636 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 17:02:58,636 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 17:02:58,637 - [DEBUG] - from application in play-akka.actor.default-dispatcher-18 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@986143, beer-sample=models.OrangeBucket@1992bc}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@f0830d}}}
-
-2013-05-31 17:02:58,657 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
-
-2013-05-31 17:17:00,735 - [INFO] - from play in New I/O worker #8 
-Application started (Dev)
-
-2013-05-31 17:17:00,812 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 17:17:00,842 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 17:17:00,879 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 17:17:00,879 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 17:17:00,883 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:17:00,883 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:17:00,921 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 17:17:00,996 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 17:17:01,201 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:17:01,202 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 17:17:01,523 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:17:01,523 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@12fac5d, beer-sample=models.OrangeBucket@dd3b69}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@678fde}
-
-2013-05-31 17:17:01,524 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:17:01,524 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:17:01,528 - [ERROR] - from application in play-akka.actor.default-dispatcher-21 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 17:17:01,529 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 17:17:01,529 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 17:17:01,530 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@12fac5d, beer-sample=models.OrangeBucket@dd3b69}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@678fde}}}
-
-2013-05-31 17:17:01,530 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@12fac5d, beer-sample=models.OrangeBucket@dd3b69}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@678fde}}}
-
-2013-05-31 17:17:04,345 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 17:17:04,346 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 17:17:04,348 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 17:17:04,349 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 17:17:04,349 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:17:04,349 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:17:04,384 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 17:17:04,460 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 17:17:04,697 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:17:04,697 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 17:17:04,903 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:17:04,903 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@2223ca, beer-sample=models.OrangeBucket@15bdc49}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1db6659}
-
-2013-05-31 17:17:04,904 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:17:04,904 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:17:04,908 - [ERROR] - from application in play-akka.actor.default-dispatcher-23 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 17:17:04,909 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 17:17:04,909 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 17:17:04,909 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@2223ca, beer-sample=models.OrangeBucket@15bdc49}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1db6659}}}
-
-2013-05-31 17:17:04,909 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@2223ca, beer-sample=models.OrangeBucket@15bdc49}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1db6659}}}
-
-2013-05-31 17:17:07,380 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 17:17:07,380 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 17:17:07,382 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 17:17:07,382 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 17:17:07,382 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:17:07,382 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:17:07,413 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 17:17:07,481 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 17:17:07,680 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:17:07,682 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 17:17:07,881 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:17:07,882 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@1d9f44b, beer-sample=models.OrangeBucket@35a45f}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1ba75cd}
-
-2013-05-31 17:17:07,883 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:17:07,888 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:17:07,899 - [ERROR] - from application in play-akka.actor.default-dispatcher-23 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 17:17:07,899 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 17:17:07,899 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 17:17:07,900 - [DEBUG] - from application in play-akka.actor.default-dispatcher-23 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@1d9f44b, beer-sample=models.OrangeBucket@35a45f}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1ba75cd}}}
-
-2013-05-31 17:17:07,914 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
-
-2013-05-31 17:20:05,440 - [INFO] - from play in New I/O worker #2 
-Application started (Dev)
-
-2013-05-31 17:20:05,478 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 17:20:05,498 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 17:20:05,505 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 17:20:05,506 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 17:20:05,509 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:20:05,510 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:20:05,549 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 17:20:05,623 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 17:20:05,835 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:20:05,836 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 17:20:06,022 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:20:06,023 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@829f87, beer-sample=models.OrangeBucket@1b78ca5}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@172a99e}
-
-2013-05-31 17:20:06,023 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:20:06,024 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:20:06,029 - [ERROR] - from application in play-akka.actor.default-dispatcher-21 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 17:20:06,029 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 17:20:06,030 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 17:20:06,030 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@829f87, beer-sample=models.OrangeBucket@1b78ca5}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@172a99e}}}
-
-2013-05-31 17:20:06,047 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
-
-2013-05-31 17:31:24,892 - [INFO] - from play in New I/O worker #4 
-Application started (Dev)
-
-2013-05-31 17:31:24,922 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 17:31:24,930 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 17:31:24,935 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 17:31:24,936 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 17:31:24,939 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:31:24,939 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:31:24,980 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 17:31:25,056 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 17:31:25,243 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:31:25,245 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 17:31:25,473 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:31:25,475 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@7e71a4, beer-sample=models.OrangeBucket@156cd6b}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1c833ab}
-
-2013-05-31 17:31:25,475 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:31:25,476 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:31:25,483 - [ERROR] - from application in play-akka.actor.default-dispatcher-27 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 17:31:25,483 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 17:31:25,484 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 17:31:25,484 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@7e71a4, beer-sample=models.OrangeBucket@156cd6b}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1c833ab}}}
-
-2013-05-31 17:31:25,503 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
-
-2013-05-31 17:31:25,610 - [DEBUG] - from application in play-akka.actor.default-dispatcher-27 
-Impossible de créer le DesignDocument display!
-
-2013-05-31 17:35:16,305 - [INFO] - from play in New I/O worker #4 
-Application started (Dev)
-
-2013-05-31 17:35:16,336 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 17:35:16,341 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 17:35:16,346 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 17:35:16,347 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 17:35:16,349 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:35:16,350 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:35:16,381 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 17:35:16,451 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 17:35:16,748 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:35:16,748 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 17:35:16,961 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 17:35:16,961 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@19c6eb5, beer-sample=models.OrangeBucket@1286a6c}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@62f8d8}
-
-2013-05-31 17:35:16,962 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 17:35:16,962 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 17:35:16,966 - [ERROR] - from application in play-akka.actor.default-dispatcher-30 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 17:35:16,967 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 17:35:16,967 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 17:35:16,967 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@19c6eb5, beer-sample=models.OrangeBucket@1286a6c}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@62f8d8}}}
-
-2013-05-31 17:35:16,983 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
-
-2013-05-31 17:35:17,118 - [DEBUG] - from application in play-akka.actor.default-dispatcher-30 
-Création du DesignDocument display!
-
-2013-05-31 18:03:18,695 - [ERROR] - from application in New I/O worker #8 
-
-
-! @6eenmi9cm - Internal server error, for (GET) [/bucket/localhost/default] ->
-
-sbt.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
-	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
-	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
-	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
-	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
-	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
-	at play.core.ReloadableApplication.get(ApplicationProvider.scala:98) ~[play_2.10.jar:2.1.1]
-	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
-	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
-	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
-	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
-	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
-	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
-	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
-	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
-	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
-	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
-	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
-	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
-	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
-	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
-
-2013-05-31 18:05:32,964 - [INFO] - from play in New I/O worker #8 
-Application started (Dev)
-
-2013-05-31 18:05:32,991 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 18:05:32,995 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 18:05:33,000 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 18:05:33,001 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 18:05:33,004 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:05:33,004 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:05:33,040 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 18:05:33,110 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 18:05:33,283 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:05:33,291 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Contenu du Design Document : {"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
-
-2013-05-31 18:05:33,292 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 18:05:33,465 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:05:33,480 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
-
-2013-05-31 18:05:33,481 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@6713c3, beer-sample=models.OrangeBucket@1428008}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@e3adaa}
-
-2013-05-31 18:05:33,482 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:05:33,482 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:05:33,487 - [ERROR] - from application in play-akka.actor.default-dispatcher-35 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 18:05:33,488 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 18:05:33,488 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 18:05:33,489 - [DEBUG] - from application in play-akka.actor.default-dispatcher-35 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@6713c3, beer-sample=models.OrangeBucket@1428008}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@e3adaa}}}
-
-2013-05-31 18:05:55,623 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 18:05:55,624 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 18:05:55,626 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 18:05:55,626 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 18:05:55,626 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:05:55,626 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:05:55,670 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 18:05:55,750 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 18:05:55,943 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:05:55,952 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Contenu du Design Document : {"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
-
-2013-05-31 18:05:55,953 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 18:05:56,116 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:05:56,128 - [INFO] - from application in play-akka.actor.default-dispatcher-39 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
-
-2013-05-31 18:05:56,230 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Création du DesignDocument display!
-
-2013-05-31 18:05:56,230 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@1872eac, beer-sample=models.OrangeBucket@92210}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@19b673a}
-
-2013-05-31 18:05:56,230 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:05:56,230 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:05:56,234 - [ERROR] - from application in play-akka.actor.default-dispatcher-39 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 18:05:56,235 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 18:05:56,235 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 18:05:56,236 - [DEBUG] - from application in play-akka.actor.default-dispatcher-39 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@1872eac, beer-sample=models.OrangeBucket@92210}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@19b673a}}}
-
-2013-05-31 18:06:02,571 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 18:06:02,571 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 18:06:02,575 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 18:06:02,575 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 18:06:02,575 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:06:02,576 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:06:02,627 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 18:06:02,714 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 18:06:02,919 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:06:02,929 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Contenu du Design Document : {"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
-
-2013-05-31 18:06:02,930 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 18:06:03,092 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:06:03,107 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
-
-2013-05-31 18:06:03,107 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@26ee18, beer-sample=models.OrangeBucket@1d99bff}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@190b8a3}
-
-2013-05-31 18:06:03,108 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:06:03,108 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:06:03,112 - [ERROR] - from application in play-akka.actor.default-dispatcher-42 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 18:06:03,112 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 18:06:03,112 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 18:06:03,112 - [DEBUG] - from application in play-akka.actor.default-dispatcher-42 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@26ee18, beer-sample=models.OrangeBucket@1d99bff}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@190b8a3}}}
-
-2013-05-31 18:06:17,814 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans le constructeur : OrangeClusterManager()
-
-2013-05-31 18:06:17,814 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans le constructeur : ClustersDAO()
-
-2013-05-31 18:06:17,816 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
-
-2013-05-31 18:06:17,816 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
-
-2013-05-31 18:06:17,817 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:06:17,817 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:06:17,849 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie de la méthode : setClusterManager() avec status = connected
-
-2013-05-31 18:06:17,917 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
-
-2013-05-31 18:06:18,087 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:06:18,105 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Contenu du Design Document : {"language":"javascript","views":{"all_documents":{"map":"function (doc, meta) {\n  emit(meta.id, doc);\n}"}}}
-
-2013-05-31 18:06:18,106 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
-
-2013-05-31 18:06:18,292 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
-
-2013-05-31 18:06:18,326 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
-
-2013-05-31 18:06:18,426 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Création du DesignDocument display!
-
-2013-05-31 18:06:18,426 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@dfdb32, beer-sample=models.OrangeBucket@afced7}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@348bc2}
-
-2013-05-31 18:06:18,426 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
-
-2013-05-31 18:06:18,427 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Entreé dans la méthode : setClusterManager()
-
-2013-05-31 18:06:18,435 - [ERROR] - from application in play-akka.actor.default-dispatcher-43 
-class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
-
-2013-05-31 18:06:18,435 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie de la méthode : setClusterManager() avec status = notConnected
-
-2013-05-31 18:06:18,435 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
-
-2013-05-31 18:06:18,436 - [DEBUG] - from application in play-akka.actor.default-dispatcher-43 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@dfdb32, beer-sample=models.OrangeBucket@afced7}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@348bc2}}}
+2013-06-02 16:33:01,247 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
+
+2013-06-02 16:33:01,248 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8091/pools/], clusterManager=null}}}
 

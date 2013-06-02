@@ -4,6 +4,8 @@ import play.Logger;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
+import views.html.errorPage;
+import views.html.pageNotfound;
 
 import static play.mvc.Results.internalServerError;
 
@@ -29,7 +31,7 @@ public class Global extends GlobalSettings {
     @Override
     public Result onError(Http.RequestHeader request, Throwable t) {
         return internalServerError(
-                views.html.errorPage.render(t)
+                errorPage.render(t)
         );
     }
 
@@ -41,7 +43,7 @@ public class Global extends GlobalSettings {
     @Override
     public Result onHandlerNotFound(Http.RequestHeader request) {
         return Results.notFound(
-                views.html.pageNotfound.render(request.uri())
+                pageNotfound.render(request.uri())
         );
     }
 
