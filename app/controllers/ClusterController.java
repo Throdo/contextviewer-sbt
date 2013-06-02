@@ -2,7 +2,6 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.clusterView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,6 +14,6 @@ public class ClusterController extends Controller {
 /*        OrangeClusterManager orangeClusterManager = new OrangeClusterManager();
         Logger.debug(orangeClusterManager.toString());
         return ok(index.render("ContextViewer v0.1",orangeClusterManager.getClusterMap()));*/
-        return ok(clusterView.render("ContextViewer v0.2", id));
+        return ok(views.html.clusterView.render("ContextViewer v0.2", id));
     }
 }

@@ -5,7 +5,6 @@ import models.OrangeCluster;
 import models.OrangeClusterManager;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.bucketView;
 
 
 /**
@@ -25,6 +24,6 @@ public class BucketController extends Controller {
         restClientDAO.getDesignDocList(idBucket);
 */
 
-        return ok(bucketView.render("ContextViewer v0.1", orangeBucket));
+        return ok(views.html.bucketView.render("ContextViewer v0.1", orangeBucket));
     }
 }
