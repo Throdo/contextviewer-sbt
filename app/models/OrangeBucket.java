@@ -201,6 +201,7 @@ public class OrangeBucket {
 
     private OrangeDocument fillDocumentContent(String idDocument) {
         OrangeDocument documentFound = null;
+
         try {
             View view = this.couchbaseClient.getView(designDocName, documentContentViewName);
             Query query = new Query();
@@ -212,10 +213,14 @@ public class OrangeBucket {
             for (ViewRow row : result) {
                 String key = row.getKey(); // deal with the document/data
                 String value = row.getValue(); // deal with the document/data
-                row.getDocument();
+
+                DesignDocument document = (DesignDocument) row.getDocument();
+
                 documentFound = new OrangeDocument(key, value);
                 this.orangeDocuments.put(key, documentFound);
+
                 Logger.debug("Document Key : " + key + " - Document Content : " + value + " trouvé !!!");
+                Logger.debug("Document Content en Json : " + document.toJson());
 
             }
         } catch (InvalidViewException e) {
