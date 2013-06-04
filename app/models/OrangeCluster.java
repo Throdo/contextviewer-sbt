@@ -80,17 +80,25 @@ public class OrangeCluster {
     public CouchbaseClient getCouchbaseClient(String bucketName) {
         Logger.debug("Entreé dans la méthode : getCouchbaseClient(bucketName " + bucketName + ")");
 
+        CouchbaseClient couchbaseClientHandler = getCouchbaseClientHandler(bucketName, "");
+        if (couchbaseClientHandler == null) {
+            couchbaseClientHandler = getCouchbaseClientHandler(bucketName, "password");
+        }
+        Logger.debug("Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = " + couchbaseClientHandler);
+
+        return couchbaseClientHandler;
+    }
+
+    private CouchbaseClient getCouchbaseClientHandler(String bucketName, String password) {
         CouchbaseClient couchbaseClientHandle = null;
 
         try {
             CouchbaseConnectionFactory cf = new
-                    CouchbaseConnectionFactory(this.uriList, bucketName, "");
+                    CouchbaseConnectionFactory(this.uriList, bucketName, password);
             couchbaseClientHandle = new CouchbaseClient(cf);
         } catch (IOException ex) {
             Logger.info(ex.getMessage());
         }
-        Logger.debug("Sortie de la méthode : getCouchbaseClient() avec status = " + this.status);
-
         return couchbaseClientHandle;
     }
 
