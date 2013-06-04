@@ -133,3 +133,78 @@ Document Key : 512_brewing_company-512_ipa - Document Content : {"name":"(512) I
 2013-06-04 22:09:29,108 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@11d5a98, beer-sample=models.OrangeBucket@26b6db}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1aefe9c}}}
 
+2013-06-04 22:27:38,072 - [INFO] - from application in New I/O worker #5 
+Application shutdown...
+
+2013-06-04 22:27:38,178 - [INFO] - from application in New I/O worker #5 
+Application has started
+
+2013-06-04 22:27:38,179 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-04 22:27:38,180 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-04 22:27:38,182 - [DEBUG] - from application in New I/O worker #5 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-04 22:27:38,182 - [DEBUG] - from application in New I/O worker #5 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-04 22:27:38,184 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-04 22:27:38,184 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-04 22:27:38,207 - [DEBUG] - from application in New I/O worker #5 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-04 22:27:38,272 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-04 22:27:38,443 - [DEBUG] - from application in New I/O worker #5 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@1ebd7a2, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@99df1a isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-04 22:27:38,449 - [DEBUG] - from application in New I/O worker #5 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-04 22:27:38,449 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans la méthode : getCouchbaseClient(bucketName default)
+
+2013-06-04 22:27:38,590 - [DEBUG] - from application in New I/O worker #5 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@1729ca0, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@188de8e isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-04 22:27:38,594 - [DEBUG] - from application in New I/O worker #5 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-04 22:27:38,595 - [DEBUG] - from application in New I/O worker #5 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@18d95c6, beer-sample=models.OrangeBucket@6420ea}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1ad019f}
+
+2013-06-04 22:27:38,595 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-04 22:27:38,595 - [DEBUG] - from application in New I/O worker #5 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-04 22:27:38,597 - [ERROR] - from application in New I/O worker #5 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-04 22:27:38,598 - [DEBUG] - from application in New I/O worker #5 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-04 22:27:38,598 - [DEBUG] - from application in New I/O worker #5 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-04 22:27:38,598 - [DEBUG] - from application in New I/O worker #5 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@18d95c6, beer-sample=models.OrangeBucket@6420ea}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1ad019f}}}
+
+2013-06-04 22:27:38,600 - [INFO] - from play in New I/O worker #5 
+Application started (Dev)
+
+2013-06-04 22:27:38,611 - [DEBUG] - from application in play-akka.actor.default-dispatcher-10 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@18d95c6, beer-sample=models.OrangeBucket@6420ea}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1ad019f}}}
+
+2013-06-04 22:27:50,379 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Document Key : 21st_amendment_brewery_cafe-oyster_point_oyster_stout - Document Content : {"name":"Oyster Point Oyster Stout","abv":5.9,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Deep black color. Chocolate milk color head, providing an array of Belgian lace. Toffee and light roasty aromas and flavors. A malty sweet taste is evident but, this rich oatmeal based stout finishes dry. Made with 20 lbs. of oysters, in the boil, from our good friends at Hog Island Oyster Company.","style":"American-Style Stout","category":"North American Ale"} trouvé !!!
+
