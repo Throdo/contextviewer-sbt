@@ -77,6 +77,10 @@ public class OrangeCluster {
 
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public CouchbaseClient getCouchbaseClient(String bucketName) {
         Logger.debug("Entreé dans la méthode : getCouchbaseClient(bucketName " + bucketName + ")");
 

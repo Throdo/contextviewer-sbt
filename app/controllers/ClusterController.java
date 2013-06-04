@@ -1,5 +1,8 @@
 package controllers;
 
+import com.orange.contextviewer.OrangeClusterManagerHandler;
+import models.OrangeCluster;
+import models.OrangeClusterManager;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.clusterView;
@@ -12,9 +15,9 @@ import views.html.clusterView;
  */
 public class ClusterController extends Controller {
     public static Result index(String id) {
-/*        OrangeClusterManager orangeClusterManager = new OrangeClusterManager();
-        Logger.debug(orangeClusterManager.toString());
-        return ok(index.render("ContextViewer v0.1",orangeClusterManager.getClusterMap()));*/
-        return ok(clusterView.render("ContextViewer v0.2", id));
+        OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getinstance();
+        OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(id);
+
+        return ok(clusterView.render("ContextViewer v0.1", orangeCluster));
     }
 }

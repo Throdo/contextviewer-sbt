@@ -1,178 +1,135 @@
-2013-06-02 23:53:59,628 - [INFO] - from play in main 
+2013-06-04 22:09:04,819 - [INFO] - from play in main 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2013-06-02 23:54:04,773 - [INFO] - from application in New I/O worker #1 
+2013-06-04 22:09:07,738 - [INFO] - from application in New I/O worker #1 
 Application has started
 
-2013-06-02 23:54:04,775 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:07,740 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-06-02 23:54:04,777 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:07,741 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-06-02 23:54:04,909 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:07,809 - [DEBUG] - from application in New I/O worker #1 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-06-02 23:54:04,909 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:07,810 - [DEBUG] - from application in New I/O worker #1 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-06-02 23:54:04,911 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:07,811 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-06-02 23:54:04,912 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:07,811 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans la méthode : setClusterManager()
 
-2013-06-02 23:54:05,216 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:08,515 - [DEBUG] - from application in New I/O worker #1 
 Sortie de la méthode : setClusterManager() avec status = connected
 
-2013-06-02 23:54:05,338 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:08,690 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
 
-2013-06-02 23:54:05,990 - [DEBUG] - from application in New I/O worker #1 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
+2013-06-04 22:09:10,106 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@14d01d7, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@b3d841 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
 
-2013-06-02 23:54:06,120 - [INFO] - from application in New I/O worker #1 
-Impossible de trouver le DesignDocument 'display'. Il faut le créer !
+2013-06-04 22:09:10,197 - [DEBUG] - from application in New I/O worker #1 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
 
-2013-06-02 23:54:06,212 - [DEBUG] - from application in New I/O worker #1 
-Création du DesignDocument display!
-
-2013-06-02 23:54:06,713 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:10,197 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans la méthode : getCouchbaseClient(bucketName default)
 
-2013-06-02 23:54:06,963 - [DEBUG] - from application in New I/O worker #1 
-Sortie de la méthode : getCouchbaseClient() avec status = connected
+2013-06-04 22:09:10,398 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@197c381, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@a465a3 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
 
-2013-06-02 23:54:06,979 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:10,404 - [DEBUG] - from application in New I/O worker #1 
 Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
 
-2013-06-02 23:54:06,980 - [DEBUG] - from application in New I/O worker #1 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@f8261e, beer-sample=models.OrangeBucket@18ebbab}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1c2db6d}
+2013-06-04 22:09:10,404 - [DEBUG] - from application in New I/O worker #1 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@11d5a98, beer-sample=models.OrangeBucket@26b6db}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1aefe9c}
 
-2013-06-02 23:54:06,980 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:10,404 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-06-02 23:54:06,980 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:10,404 - [DEBUG] - from application in New I/O worker #1 
 Entreé dans la méthode : setClusterManager()
 
-2013-06-02 23:54:06,985 - [ERROR] - from application in New I/O worker #1 
+2013-06-04 22:09:10,413 - [ERROR] - from application in New I/O worker #1 
 class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
 
-2013-06-02 23:54:06,986 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:10,413 - [DEBUG] - from application in New I/O worker #1 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-06-02 23:54:06,987 - [DEBUG] - from application in New I/O worker #1 
+2013-06-04 22:09:10,413 - [DEBUG] - from application in New I/O worker #1 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-06-02 23:54:06,988 - [DEBUG] - from application in New I/O worker #1 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@f8261e, beer-sample=models.OrangeBucket@18ebbab}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1c2db6d}}}
+2013-06-04 22:09:10,414 - [DEBUG] - from application in New I/O worker #1 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@11d5a98, beer-sample=models.OrangeBucket@26b6db}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1aefe9c}}}
 
-2013-06-02 23:54:07,025 - [INFO] - from play in New I/O worker #1 
+2013-06-04 22:09:10,425 - [INFO] - from play in New I/O worker #1 
 Application started (Dev)
 
-2013-06-02 23:54:16,017 - [DEBUG] - from application in play-akka.actor.default-dispatcher-6 
-OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@f8261e, beer-sample=models.OrangeBucket@18ebbab}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1c2db6d}}}
+2013-06-04 22:09:13,150 - [DEBUG] - from application in play-akka.actor.default-dispatcher-5 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@11d5a98, beer-sample=models.OrangeBucket@26b6db}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1aefe9c}}}
 
-2013-06-02 23:54:23,700 - [ERROR] - from application in play-internal-execution-context-3 
-
-
-! @6efe4oc0k - Internal server error, for (GET) [/document/localhost/beer-sample/21st_amendment_brewery_cafe-oyster_point_oyster_stout] ->
-
-play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
-	at play.api.Application$class.handleError(Application.scala:289) ~[play_2.10.jar:2.1.1]
-	at play.api.DefaultApplication.handleError(Application.scala:383) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anon$2$$anonfun$handle$1.apply(PlayDefaultUpstreamHandler.scala:144) [play_2.10.jar:2.1.1]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anon$2$$anonfun$handle$1.apply(PlayDefaultUpstreamHandler.scala:140) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend1$1.apply(Promise.scala:113) [play_2.10.jar:2.1.1]
-	at play.api.libs.concurrent.PlayPromise$$anonfun$extend$1$$anonfun$apply$1.apply(Promise.scala:104) [play_2.10.jar:2.1.1]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
-	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
-java.lang.NullPointerException: null
-	at views.html.documentView$.apply(documentView.template.scala:41) ~[na:na]
-	at views.html.documentView$.render(documentView.template.scala:55) ~[na:na]
-	at views.html.documentView.render(documentView.template.scala) ~[na:na]
-	at controllers.DocumentController.index(DocumentController.java:30) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:85) ~[na:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4$$anonfun$apply$4.apply(routes_routing.scala:85) ~[na:na]
-	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:164) ~[play_2.10.jar:2.1.1]
-	at play.core.Router$Routes$$anon$1.invocation(Router.scala:345) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) ~[play_2.10.jar:2.1.1]
-	at play.GlobalSettings$1.call(GlobalSettings.java:63) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) ~[play_2.10.jar:2.1.1]
-	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) ~[play_2.10.jar:2.1.1]
-	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) ~[play_2.10.jar:2.1.1]
-	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) ~[akka-actor_2.10.jar:na]
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) ~[akka-actor_2.10.jar:na]
-	at akka.actor.ActorCell.invoke(ActorCell.scala:386) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.Mailbox.run(Mailbox.scala:212) ~[akka-actor_2.10.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) ~[akka-actor_2.10.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[scala-library.jar:na]
-
-2013-06-02 23:56:54,756 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,113 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe - Document Content : {"name":"21st Amendment Brewery Cafe","city":"San Francisco","state":"California","code":"94107","country":"United States","phone":"1-415-369-0900","website":"http:\/\/www.21st-amendment.com\/","type":"brewery","updated":"2010-10-24 13:54:07","description":"The 21st Amendment Brewery offers a variety of award winning house made brews and American grilled cuisine in a comfortable loft like setting. Join us before and after Giants baseball games in our outdoor beer garden. A great location for functions and parties in our semi-private Brewers Loft. See you soon at the 21A!","address":["563 Second Street"],"geo":{"accuracy":"ROOFTOP","lat":37.7825,"lon":-122.393}} trouvé !!!
 
-2013-06-02 23:56:54,757 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,113 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-21a_ipa - Document Content : {"name":"21A IPA","abv":7.2,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Deep golden color. Citrus and piney hop aromas. Assertive malt backbone supporting the overwhelming bitterness. Dry hopped in the fermenter with four types of hops giving an explosive hop aroma. Many refer to this IPA as Nectar of the Gods. Judge for yourself. Now Available in Cans!","style":"American-Style India Pale Ale","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,757 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-563_stout - Document Content : {"name":"563 Stout","abv":5,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Deep black color, toasted black burnt coffee flavors and aroma. Dispensed with Nitrogen through a slow-flow faucet giving it the characteristic cascading effect, resulting in a rich dense creamy head.","style":"American-Style Stout","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,757 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-amendment_pale_ale - Document Content : {"name":"Amendment Pale Ale","abv":5.2,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Rich golden hue color. Floral hop with sweet malt aroma. Medium mouth feel with malt sweetness, hop quenching flavor and well-balanced bitterness.","style":"American-Style Pale Ale","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,757 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-bitter_american - Document Content : {"name":"Bitter American","abv":3.6,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"An American session beer. Loaded with hop character and a malty presence, but lower in alcohol.","style":"Special Bitter or Best Bitter","category":"British Ale"} trouvé !!!
 
-2013-06-02 23:56:54,757 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-double_trouble_ipa - Document Content : {"name":"Double Trouble IPA","abv":9.8,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Deep, golden, rich malt flavor huge citrus, fruity grassy, ethanol sweetness aroma with a profound bitterness, yet balanced malt back bone with grapefruit, mellow citric overtones. Dry hopped three times in the fermenter. Brewed with over 65 lbs of hops for 300 gallons of beer. The beer to bring world peace and end the war. Bronze Medal - 2006 Imperial IPA Festival at the Bistro in Hayward, California.","style":"Imperial or Double India Pale Ale","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,757 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-general_pippo_s_porter - Document Content : {"name":"General Pippo's Porter","abv":5.5,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Deep toffee color with rich roasty and subtle hop aroma. Chocolate flavors dominate the palate and interact with back-end sweetness.","style":"Porter","category":"Irish Ale"} trouvé !!!
 
-2013-06-02 23:56:54,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-north_star_red - Document Content : {"name":"North Star Red","abv":5.8,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Deep amber color. Subtle hop floral nose intertwined with sweet crystal malt aromas. Rich malt flavors supporting a slight bitterness finish.","style":"American-Style Amber\/Red Ale","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-oyster_point_oyster_stout - Document Content : {"name":"Oyster Point Oyster Stout","abv":5.9,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Deep black color. Chocolate milk color head, providing an array of Belgian lace. Toffee and light roasty aromas and flavors. A malty sweet taste is evident but, this rich oatmeal based stout finishes dry. Made with 20 lbs. of oysters, in the boil, from our good friends at Hog Island Oyster Company.","style":"American-Style Stout","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-potrero_esb - Document Content : {"name":"Potrero ESB","abv":5.2,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Traditional English E.S.B. made with English malt and hops. Fruity aroma with an imparted tart flavor brought about by replicating the water profile in England at Burton on Trent.","style":"Special Bitter or Best Bitter","category":"British Ale"} trouvé !!!
 
-2013-06-02 23:56:54,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,114 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-south_park_blonde - Document Content : {"name":"South Park Blonde","abv":5,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"Light golden color. Sweet dry aroma with crisp, clear bitterness. Brewed with imported German hops.The perfect beer to have when you'd like to have more than one.","style":"Golden or Blonde Ale","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 21st_amendment_brewery_cafe-watermelon_wheat - Document Content : {"name":"Watermelon Wheat","abv":5.5,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"21st_amendment_brewery_cafe","updated":"2010-07-22 20:00:20","description":"The definition of summer in a pint glass. This unique, American-style wheat beer, is brewed with 400 lbs. of fresh pressed watermelon in each batch. Light turbid, straw color, with the taste and essence of fresh watermelon. Finishes dry and clean. Now Available in Cans!","style":"Belgian-Style Fruit Lambic","category":"Belgian and French Ale"} trouvé !!!
 
-2013-06-02 23:56:54,758 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 3_fonteinen_brouwerij_ambachtelijke_geuzestekerij - Document Content : {"name":"3 Fonteinen Brouwerij Ambachtelijke Geuzestekerij","city":"Beersel","state":"Vlaams Brabant","code":"","country":"Belgium","phone":"32-02-\/-306-71-03","website":"http:\/\/www.3fonteinen.be\/index.htm","type":"brewery","updated":"2010-07-22 20:00:20","description":"","address":["Hoogstraat 2A"],"geo":{"accuracy":"RANGE_INTERPOLATED","lat":50.7668,"lon":4.3081}} trouvé !!!
 
-2013-06-02 23:56:54,759 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 3_fonteinen_brouwerij_ambachtelijke_geuzestekerij-drie_fonteinen_kriek - Document Content : {"name":"Drie Fonteinen Kriek","abv":5,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"3_fonteinen_brouwerij_ambachtelijke_geuzestekerij","updated":"2010-07-22 20:00:20","description":"","style":"Belgian-Style Fruit Lambic","category":"Belgian and French Ale"} trouvé !!!
 
-2013-06-02 23:56:54,759 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 3_fonteinen_brouwerij_ambachtelijke_geuzestekerij-oude_geuze - Document Content : {"name":"Oude Geuze","abv":6,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"3_fonteinen_brouwerij_ambachtelijke_geuzestekerij","updated":"2010-07-22 20:00:20","description":"","style":"Belgian-Style Fruit Lambic","category":"Belgian and French Ale"} trouvé !!!
 
-2013-06-02 23:56:54,759 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 357 - Document Content : {"name":"357","city":"","state":"","code":"","country":"","phone":"","website":"","type":"brewery","updated":"2010-07-22 20:00:20","description":"","address":[]} trouvé !!!
 
-2013-06-02 23:56:54,759 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 512_brewing_company - Document Content : {"name":"(512) Brewing Company","city":"Austin","state":"Texas","code":"78745","country":"United States","phone":"512.707.2337","website":"http:\/\/512brewing.com\/","type":"brewery","updated":"2010-07-22 20:00:20","description":"(512) Brewing Company is a microbrewery located in the heart of Austin that brews for the community using as many local, domestic and organic ingredients as possible.","address":["407 Radam, F200"],"geo":{"accuracy":"ROOFTOP","lat":30.2234,"lon":-97.7697}} trouvé !!!
 
-2013-06-02 23:56:54,759 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 512_brewing_company-512_alt - Document Content : {"name":"(512) ALT","abv":6,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"512_brewing_company","updated":"2010-07-22 20:00:20","description":"(512) ALT is a German-style amber ale that is fermented cooler than typical ales and cold conditioned like a lager. ALT means “old” in German and refers to a beer style made using ale yeast after many German brewers had switched to newly discovered lager yeast. This ale has a very smooth, yet pronounced, hop bitterness with a malty backbone and a characteristic German yeast character. Made with 98% Organic 2-row and Munch malts and US noble hops.","style":"German-Style Brown Ale\/Altbier","category":"German Ale"} trouvé !!!
 
-2013-06-02 23:56:54,759 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,115 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 512_brewing_company-512_bruin - Document Content : {"name":"(512) Bruin","abv":7.6,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"512_brewing_company","updated":"2010-07-22 20:00:20","description":"At once cuddly and ferocious, (512) BRUIN combines a smooth, rich maltiness and mahogany color with a solid hop backbone and stealthy 7.6% alcohol. Made with Organic 2 Row and Munich malts, plus Chocolate and Crystal malts, domestic hops, and a touch of molasses, this brew has notes of raisins, dark sugars, and cocoa, and pairs perfectly with food and the crisp fall air.","style":"American-Style Brown Ale","category":"North American Ale"} trouvé !!!
 
-2013-06-02 23:56:54,760 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+2013-06-04 22:09:19,116 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
 Document Key : 512_brewing_company-512_ipa - Document Content : {"name":"(512) IPA","abv":7,"ibu":0,"srm":0,"upc":0,"type":"beer","brewery_id":"512_brewing_company","updated":"2010-07-22 20:00:20","description":"(512) India Pale Ale is a big, aggressively dry-hopped American IPA with smooth bitterness (~65 IBU) balanced by medium maltiness. Organic 2-row malted barley, loads of hops, and great Austin water create an ale with apricot and vanilla aromatics that lure you in for more.","style":"American-Style India Pale Ale","category":"North American Ale"} trouvé !!!
+
+2013-06-04 22:09:29,108 - [DEBUG] - from application in play-akka.actor.default-dispatcher-3 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@11d5a98, beer-sample=models.OrangeBucket@26b6db}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1aefe9c}}}
 

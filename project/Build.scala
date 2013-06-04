@@ -1,4 +1,5 @@
 import sbt._
+import Keys._
 import play.Project._
 
 object ApplicationBuild extends Build {
@@ -10,7 +11,7 @@ object ApplicationBuild extends Build {
     // Add your project dependencies here,
     javaCore,
     javaJdbc,
-    javaEbean ,
+    javaEbean,
     "com.google.code.gson" % "gson" % "2.2.4" withSources(),
     "com.sun.jersey" % "jersey-client" % "1.17.1" withSources(),
     "com.sun.jersey" % "jersey-core" % "1.17.1" withSources(),
@@ -19,9 +20,14 @@ object ApplicationBuild extends Build {
     "couchbase" % "couchbase-client" % "1.1.6"
   )
 
-  val main = play.Project(appName, appVersion, appDependencies)
-    .settings(
-    // Add your own project settings here
+  val main = play.Project(appName, appVersion, appDependencies).settings(
+
+    resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/",
+    resolvers += "Jboss repository" at "http://repository.jboss.org/nexus/",
+    resolvers += "Scala-Tools Maven2 Snapshots Repository" at "http://scala-tools.org/repo-snapshots",
+    resolvers += "Couchbase Repository" at "http://files.couchbase.com/maven2/",
+    resolvers += "Play 2.1.1 local Repository" at "file://home/throdo/Programmation/Binaires/Play2/play-2.1.1/repository/cache/",
+    resolvers += "Maven 2 local Repository" at "file://home/throdo/.m2/repository/"
   )
 
 }
