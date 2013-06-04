@@ -82,7 +82,8 @@ public class OrangeCluster {
 
         CouchbaseClient couchbaseClientHandler = getCouchbaseClientHandler(bucketName, "");
         if (couchbaseClientHandler == null) {
-            couchbaseClientHandler = getCouchbaseClientHandler(bucketName, "password");
+            //TODO rendre le fonctionnement générique via un fichier de properties qui décrira les buckets.
+            couchbaseClientHandler = getCouchbaseClientHandler(bucketName, "administrator");
         }
         Logger.debug("Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = " + couchbaseClientHandler);
 
