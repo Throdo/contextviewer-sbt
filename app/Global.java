@@ -2,17 +2,22 @@ import com.orange.contextviewer.OrangeClusterManagerHandler;
 import play.Application;
 import play.GlobalSettings;
 import play.Logger;
+import play.mvc.Action;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Results;
 import views.html.errorPage;
 import views.html.pageNotfound;
 
+import java.lang.reflect.Method;
+
 import static play.mvc.Results.internalServerError;
 
 
 /**
  * Created with IntelliJ IDEA.
+ * Classe qui sert à gérer les paramètres globaux de l'application.
+ * <p/>
  * User: throdo
  * Date: 02/06/13
  * Time: 15:01
@@ -20,7 +25,7 @@ import static play.mvc.Results.internalServerError;
 public class Global extends GlobalSettings {
 
     /**
-     * Méthode qui est lancé au démarrage de l'application (premier appel)
+     * Méthode qui est lancée au démarrage (start-up) de l'application (premier appel)
      *
      * @param app
      */
@@ -31,7 +36,7 @@ public class Global extends GlobalSettings {
     }
 
     /**
-     * Méthode qui est lancé à la fermeture de l'application.
+     * Méthode qui est lancée à la fermeture (shutdown) de l'application.
      *
      * @param app
      */
@@ -40,6 +45,20 @@ public class Global extends GlobalSettings {
         Logger.info("Application shutdown...");
         OrangeClusterManagerHandler.releaseInstance();
     }
+
+    /**
+     * Méthode qui intercepte toute action et qui est exécutée avant - sorte de filtre pour une action.
+     *
+     * @param request      Http request
+     * @param actionMethod
+     * @return
+     */
+    @Override
+    public Action onRequest(Http.Request request, Method actionMethod) {
+        Logger.debug("before each request... Request : " + request.toString() + " Action : " + actionMethod.getName());
+        return super.onRequest(request, actionMethod);
+    }
+
 
     /**
      * Méthode appelé dans le cas d'une erreur lors du traitement. Code d'erreur HTTP 500.
