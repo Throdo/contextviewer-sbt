@@ -9,7 +9,11 @@ import play.mvc.Results;
 import views.html.errorPage;
 import views.html.pageNotfound;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Properties;
 
 import static play.mvc.Results.internalServerError;
 
@@ -24,6 +28,45 @@ import static play.mvc.Results.internalServerError;
  */
 public class Global extends GlobalSettings {
 
+    private String applicationVersion;
+    private String clusterConfigurationFile;
+
+    /**
+     * Get la version de l'application
+     *
+     * @return
+     */
+    public String getApplicationVersion() {
+        return applicationVersion;
+    }
+
+    /**
+     * Set la version de l'application en cours.
+     *
+     * @param applicationVersion
+     */
+    public void setApplicationVersion(String applicationVersion) {
+        this.applicationVersion = applicationVersion;
+    }
+
+    /**
+     * Get clusterConfigurationFile
+     *
+     * @return clusterConfigurationFile
+     */
+    public String getClusterConfigurationFile() {
+        return clusterConfigurationFile;
+    }
+
+    /**
+     * Set clusterConfigurationFile
+     *
+     * @param clusterConfigurationFile Chemin d'accès au fichier de configuration des clusters au format Json
+     */
+    public void setClusterConfigurationFile(String clusterConfigurationFile) {
+        this.clusterConfigurationFile = clusterConfigurationFile;
+    }
+
     /**
      * Méthode qui est lancée au démarrage (start-up) de l'application (premier appel)
      *
@@ -32,7 +75,39 @@ public class Global extends GlobalSettings {
     @Override
     public void onStart(Application app) {
         Logger.info("Application has started");
+
+        Logger.debug("Lecture du fichier properties 'configuration.properties' de configuration");
+
+        //Reading properties file in Java example
+        Properties props = new Properties();
+        FileInputStream fis;
+
+        try {
+            fis = new FileInputStream("public/configuration/configuration.properties");
+
+            //loading properties from properties file
+            try {
+                props.load(fis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            //reading property
+            applicationVersion = props.getProperty("application.version");
+            clusterConfigurationFile = props.getProperty("configuration.fichier");
+            Logger.debug("Version de l'application : " + applicationVersion);
+            Logger.debug("Chemin d 'accès du fichier de configuration des clusters Couchbase : " + clusterConfigurationFile);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            Logger.warn("Impossible de trouver le fichier de configuration de l'application. On est en mode par défaut.");
+            this.applicationVersion = "N/A";
+            this.clusterConfigurationFile = "public/configuration/contextClusterDescription.conf";
+        }
+
+        Logger.debug("Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'");
         OrangeClusterManagerHandler.getinstance();
+
     }
 
     /**
