@@ -2,6 +2,7 @@ package com.orange.contextviewer.dao;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import com.orange.contextviewer.ApplicationConfigurationHandler;
 import play.Logger;
 
 import java.io.BufferedReader;
@@ -17,6 +18,7 @@ import java.util.List;
  * Date: 20/05/13
  * Time: 10:40
  */
+@SuppressWarnings("unused")
 public class ClustersDAO {
 
     private List<ClusterDAO> clusterDAOList = new ArrayList<ClusterDAO>();
@@ -36,7 +38,8 @@ public class ClustersDAO {
             }.getType();
             Gson gson = new Gson();
 
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("public/configuration/contextClusterDescription.conf"));
+
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(ApplicationConfigurationHandler.getinstance().getClusterConfigurationFile()));
             this.clusterDAOList = gson.fromJson(bufferedReader, collectionType);
             Logger.debug(this.clusterDAOList.toString());
 

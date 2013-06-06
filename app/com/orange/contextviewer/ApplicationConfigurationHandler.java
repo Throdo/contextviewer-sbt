@@ -1,27 +1,27 @@
 package com.orange.contextviewer;
 
-import models.OrangeClusterManager;
+import com.orange.contextviewer.model.ApplicationConfiguration;
 
 /**
  * Created with IntelliJ IDEA.
  * User: throdo
- * Date: 02/06/13
- * Time: 16:37
+ * Date: 06/06/13
+ * Time: 22:13
  */
-@SuppressWarnings("unused")
-public class OrangeClusterManagerHandler {
+public class ApplicationConfigurationHandler {
 
-    private static OrangeClusterManager instance;
+
+    private static ApplicationConfiguration instance;
 
     /**
      * Méthode qui retourne une instance si elle existe ou bien la crée.
      *
-     * @return
+     * @return instance
      */
-    public static OrangeClusterManager getinstance() {
+    public static ApplicationConfiguration getinstance() {
         if (null == instance) {
             // Premier appel
-            instance = new OrangeClusterManager();
+            instance = new ApplicationConfiguration();
         }
         return instance;
     }
@@ -29,13 +29,15 @@ public class OrangeClusterManagerHandler {
     /**
      * Constructeur privé pour éviter l'instanciation directe.
      */
-    private OrangeClusterManagerHandler() {
+    private ApplicationConfigurationHandler() {
     }
 
     /**
      * Libère l'instance du Singleton
      */
     public static void releaseInstance() {
-        OrangeClusterManagerHandler.instance = null;
+        ApplicationConfigurationHandler.instance = null;
     }
+
+
 }

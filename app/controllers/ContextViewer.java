@@ -1,5 +1,6 @@
 package controllers;
 
+import com.orange.contextviewer.ApplicationConfigurationHandler;
 import com.orange.contextviewer.OrangeClusterManagerHandler;
 import models.OrangeClusterManager;
 import play.Logger;
@@ -15,8 +16,9 @@ import views.html.index;
  */
 public class ContextViewer extends Controller {
     public static Result index() {
+        String version = ApplicationConfigurationHandler.getinstance().getApplicationVersion();
         OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getinstance();
         Logger.debug(orangeClusterManager.toString());
-        return ok(index.render("ContextViewer v0.1", orangeClusterManager.getClusterMap()));
+        return ok(index.render(version, orangeClusterManager.getClusterMap()));
     }
 }

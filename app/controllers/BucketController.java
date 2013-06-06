@@ -1,5 +1,6 @@
 package controllers;
 
+import com.orange.contextviewer.ApplicationConfigurationHandler;
 import com.orange.contextviewer.OrangeClusterManagerHandler;
 import models.OrangeBucket;
 import models.OrangeCluster;
@@ -17,16 +18,14 @@ import views.html.bucketView;
  */
 public class BucketController extends Controller {
     public static Result index(String idCluster, String idBucket) {
+        String version = ApplicationConfigurationHandler.getinstance().getApplicationVersion();
+
         OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getinstance();
         OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(idCluster);
         OrangeBucket orangeBucket = orangeCluster.getBucketMap().get(idBucket);
 
         orangeBucket.fillBucketWithDocuments();
-/*
-        RestClientDAO restClientDAO = new RestClientDAO(orangeCluster.getUriList().get(0));
-        restClientDAO.getDesignDocList(idBucket);
-*/
 
-        return ok(bucketView.render("ContextViewer v0.1", idCluster, orangeBucket));
+        return ok(bucketView.render(version, idCluster, orangeBucket));
     }
 }
