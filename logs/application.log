@@ -1,87 +1,1213 @@
-2013-06-06 22:05:06,085 - [INFO] - from play in main 
+2013-06-09 11:39:04,078 - [INFO] - from play in main 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2013-06-06 22:05:32,322 - [INFO] - from application in New I/O worker #1 
+2013-06-09 11:39:26,303 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6eh99o1if - Internal server error, for (GET) [/] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[too many arguments for method index: ()play.api.mvc.Call]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication.get(ApplicationProvider.scala:98) ~[play_2.10.jar:2.1.1]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
+
+2013-06-09 11:39:26,528 - [WARN] - from play in New I/O worker #1 
+No application found at invoker init
+
+2013-06-09 11:49:56,498 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6eh9b7o03 - Internal server error, for (GET) [/] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method index: (refresh: Boolean)play.api.mvc.Call.
+Unspecified value parameter refresh.]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication.get(ApplicationProvider.scala:98) ~[play_2.10.jar:2.1.1]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
+
+2013-06-09 11:50:35,183 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6eh9ba360 - Internal server error, for (GET) [/] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method index: (refresh: Boolean)play.api.mvc.Call.
+Unspecified value parameter refresh.]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication.get(ApplicationProvider.scala:98) ~[play_2.10.jar:2.1.1]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
+
+2013-06-09 11:51:42,939 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6eh9bdpc0 - Internal server error, for (GET) [/] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error[not enough arguments for method index: (refresh: Boolean)play.api.mvc.Call.
+Unspecified value parameter refresh.]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15$$anonfun$apply$16.apply(PlayReloader.scala:349) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:349) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2$$anonfun$apply$15.apply(PlayReloader.scala:346) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:346) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$2.apply(PlayReloader.scala:344) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:374) ~[na:na]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:344) ~[na:na]
+	at play.core.ReloadableApplication.get(ApplicationProvider.scala:98) ~[play_2.10.jar:2.1.1]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
+
+2013-06-09 11:52:37,819 - [INFO] - from application in New I/O worker #2 
 Application has started
 
-2013-06-06 22:05:32,322 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:37,820 - [DEBUG] - from application in New I/O worker #2 
 Lecture du fichier properties 'configuration.properties' de configuration
 
-2013-06-06 22:05:32,322 - [DEBUG] - from application in New I/O worker #1 
-jdbc.username: 0.1a
+2013-06-09 11:52:37,823 - [DEBUG] - from application in New I/O worker #2 
+Version de l'application : 0.1a
 
-2013-06-06 22:05:32,322 - [DEBUG] - from application in New I/O worker #1 
-jdbc.driver: public/configuration/contextClusterDescription.conf
+2013-06-09 11:52:37,824 - [DEBUG] - from application in New I/O worker #2 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
 
-2013-06-06 22:05:32,323 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:37,824 - [DEBUG] - from application in New I/O worker #2 
 Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'
 
-2013-06-06 22:05:32,324 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:37,826 - [DEBUG] - from application in New I/O worker #2 
 Entreé dans le constructeur : OrangeClusterManager()
 
-2013-06-06 22:05:32,325 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:37,828 - [DEBUG] - from application in New I/O worker #2 
 Entreé dans le constructeur : ClustersDAO()
 
-2013-06-06 22:05:32,395 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:38,001 - [DEBUG] - from application in New I/O worker #2 
 [ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
 
-2013-06-06 22:05:32,396 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:38,001 - [DEBUG] - from application in New I/O worker #2 
 Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
 
-2013-06-06 22:05:32,397 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:38,004 - [DEBUG] - from application in New I/O worker #2 
 Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
 
-2013-06-06 22:05:32,397 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:38,005 - [DEBUG] - from application in New I/O worker #2 
 Entreé dans la méthode : setClusterManager()
 
-2013-06-06 22:05:32,551 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:38,306 - [DEBUG] - from application in New I/O worker #2 
 Sortie de la méthode : setClusterManager() avec status = connected
 
-2013-06-06 22:05:32,617 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:38,405 - [DEBUG] - from application in New I/O worker #2 
 Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
 
-2013-06-06 22:05:33,006 - [DEBUG] - from application in New I/O worker #1 
-Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@828f0f, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@17e251f isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+2013-06-09 11:52:39,216 - [DEBUG] - from application in New I/O worker #2 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@beede, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@16f33eb isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
 
-2013-06-06 22:05:33,046 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 11:52:39,216 - [DEBUG] - from application in New I/O worker #2 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 11:52:39,412 - [DEBUG] - from application in New I/O worker #2 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 11:52:39,611 - [DEBUG] - from application in New I/O worker #2 
 Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
 
-2013-06-06 22:05:33,047 - [DEBUG] - from application in New I/O worker #1 
-Entreé dans la méthode : getCouchbaseClient(bucketName default)
+2013-06-09 11:52:39,612 - [DEBUG] - from application in New I/O worker #2 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
 
-2013-06-06 22:05:33,194 - [DEBUG] - from application in New I/O worker #1 
-Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@14552fd, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@4b64cc isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+2013-06-09 11:52:39,641 - [INFO] - from application in New I/O worker #2 
+NullPointerException : null
 
-2013-06-06 22:05:33,202 - [DEBUG] - from application in New I/O worker #1 
-Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+2013-06-09 11:52:39,921 - [DEBUG] - from application in New I/O worker #2 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@117c036, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@4c4d13 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
 
-2013-06-06 22:05:33,202 - [DEBUG] - from application in New I/O worker #1 
-Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={default=models.OrangeBucket@135a4a0, beer-sample=models.OrangeBucket@cb04fe}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@b4f571}
+2013-06-09 11:52:39,921 - [DEBUG] - from application in New I/O worker #2 
+Entrée dans la méthode createDisplayDesignDocument().
 
-2013-06-06 22:05:33,203 - [DEBUG] - from application in New I/O worker #1 
-Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+2013-06-09 11:52:39,980 - [ERROR] - from application in New I/O worker #2 
 
-2013-06-06 22:05:33,203 - [DEBUG] - from application in New I/O worker #1 
+
+! @6eh9bh5li - Internal server error, for (GET) [/] ->
+
+play.api.UnexpectedException: Unexpected exception[RuntimeException: A design document needs a view]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$1.apply(ApplicationProvider.scala:142) ~[play_2.10.jar:2.1.1]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$1.apply(ApplicationProvider.scala:106) ~[play_2.10.jar:2.1.1]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:106) ~[play_2.10.jar:2.1.1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.1.1]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
+	at play.core.ReloadableApplication.get(ApplicationProvider.scala:104) ~[play_2.10.jar:2.1.1]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:56) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:88) [play_2.10.jar:2.1.1]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:87) [play_2.10.jar:2.1.1]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:523) [scala-library.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:87) [play_2.10.jar:2.1.1]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:34) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$6.apply(PlayDefaultUpstreamHandler.scala:115) [play_2.10.jar:2.1.1]
+	at scala.util.Either.fold(Either.scala:98) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:109) [play_2.10.jar:2.1.1]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:787) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:560) [netty.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:555) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:107) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:88) [netty.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_21]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_21]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_21]
+Caused by: java.lang.RuntimeException: A design document needs a view
+	at com.couchbase.client.protocol.views.DesignDocument.toJson(DesignDocument.java:200) ~[couchbase-client-1.1.6.jar:1.1.6]
+	at com.couchbase.client.CouchbaseClient.asyncCreateDesignDoc(CouchbaseClient.java:625) ~[couchbase-client-1.1.6.jar:1.1.6]
+	at com.couchbase.client.CouchbaseClient.createDesignDoc(CouchbaseClient.java:564) ~[couchbase-client-1.1.6.jar:1.1.6]
+	at models.OrangeBucket.createDisplayDesignDocument(OrangeBucket.java:223) ~[na:na]
+	at models.OrangeBucket.getBucketInformation(OrangeBucket.java:151) ~[na:na]
+	at models.OrangeBucket.<init>(OrangeBucket.java:50) ~[na:na]
+	at models.OrangeCluster.<init>(OrangeCluster.java:157) ~[na:na]
+	at models.OrangeClusterManager.<init>(OrangeClusterManager.java:47) ~[na:na]
+	at com.orange.contextviewer.OrangeClusterManagerHandler.getInstance(OrangeClusterManagerHandler.java:24) ~[na:na]
+	at Global.onStart(Global.java:43) ~[na:na]
+	at play.core.j.JavaGlobalSettingsAdapter.onStart(JavaGlobalSettingsAdapter.scala:17) ~[play_2.10.jar:2.1.1]
+	at play.api.GlobalPlugin.onStart(GlobalSettings.scala:175) ~[play_2.10.jar:2.1.1]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:63) ~[play_2.10.jar:2.1.1]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:63) ~[play_2.10.jar:2.1.1]
+	at scala.collection.immutable.List.foreach(List.scala:309) ~[scala-library.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:63) ~[play_2.10.jar:2.1.1]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:63) ~[play_2.10.jar:2.1.1]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:63) ~[play_2.10.jar:2.1.1]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.1.1]
+	at play.api.Play$.start(Play.scala:62) ~[play_2.10.jar:2.1.1]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$1.apply(ApplicationProvider.scala:133) ~[play_2.10.jar:2.1.1]
+	... 42 common frames omitted
+
+2013-06-09 12:11:20,078 - [INFO] - from application in New I/O worker #3 
+Application shutdown...
+
+2013-06-09 12:11:20,333 - [INFO] - from application in New I/O worker #3 
+Application has started
+
+2013-06-09 12:11:20,333 - [DEBUG] - from application in New I/O worker #3 
+Lecture du fichier properties 'configuration.properties' de configuration
+
+2013-06-09 12:11:20,337 - [DEBUG] - from application in New I/O worker #3 
+Version de l'application : 0.1a
+
+2013-06-09 12:11:20,338 - [DEBUG] - from application in New I/O worker #3 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 12:11:20,338 - [DEBUG] - from application in New I/O worker #3 
+Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'
+
+2013-06-09 12:11:20,342 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 12:11:20,344 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 12:11:20,349 - [DEBUG] - from application in New I/O worker #3 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 12:11:20,350 - [DEBUG] - from application in New I/O worker #3 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 12:11:20,354 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:11:20,354 - [DEBUG] - from application in New I/O worker #3 
 Entreé dans la méthode : setClusterManager()
 
-2013-06-06 22:05:33,205 - [ERROR] - from application in New I/O worker #1 
+2013-06-09 12:11:20,385 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 12:11:20,450 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 12:11:20,679 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@e66248, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@13e9fe6 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:11:20,680 - [DEBUG] - from application in New I/O worker #3 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:11:20,758 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:11:20,930 - [DEBUG] - from application in New I/O worker #3 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 12:11:20,930 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 12:11:20,943 - [INFO] - from application in New I/O worker #3 
+NullPointerException : null
+
+2013-06-09 12:11:21,158 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@a8f1c4, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@198a855 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:11:21,159 - [DEBUG] - from application in New I/O worker #3 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:11:21,273 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:11:24,491 - [ERROR] - from application in New I/O worker #3 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 12:11:24,491 - [DEBUG] - from application in New I/O worker #3 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\n  if (meta.id)\n  {\n     emit(meta.id, doc);\n  }\n}"}}}
+
+2013-06-09 12:11:24,492 - [DEBUG] - from application in New I/O worker #3 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1819ac6, beer-sample=models.OrangeBucket@1d84c4c}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1792603}
+
+2013-06-09 12:11:24,493 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:11:24,493 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:11:24,497 - [ERROR] - from application in New I/O worker #3 
 class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
 
-2013-06-06 22:05:33,206 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 12:11:24,498 - [DEBUG] - from application in New I/O worker #3 
 Sortie de la méthode : setClusterManager() avec status = notConnected
 
-2013-06-06 22:05:33,206 - [DEBUG] - from application in New I/O worker #1 
+2013-06-09 12:11:24,498 - [DEBUG] - from application in New I/O worker #3 
 Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
 
-2013-06-06 22:05:33,206 - [DEBUG] - from application in New I/O worker #1 
-Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@135a4a0, beer-sample=models.OrangeBucket@cb04fe}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@b4f571}}}
+2013-06-09 12:11:24,499 - [DEBUG] - from application in New I/O worker #3 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1819ac6, beer-sample=models.OrangeBucket@1d84c4c}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@1792603}}}
 
-2013-06-06 22:05:33,214 - [INFO] - from play in New I/O worker #1 
+2013-06-09 12:11:24,529 - [INFO] - from play in New I/O worker #3 
 Application started (Dev)
 
-2013-06-06 22:05:58,741 - [DEBUG] - from application in play-akka.actor.default-dispatcher-2 
-before each request... Request : GET /contextViewer Action : index
+2013-06-09 12:12:19,379 - [DEBUG] - from application in play-akka.actor.default-dispatcher-4 
+before each request... Request : GET /contextViewer/false Action : index
 
-2013-06-06 22:05:58,775 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
-OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={default=models.OrangeBucket@135a4a0, beer-sample=models.OrangeBucket@cb04fe}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@b4f571}}}
+2013-06-09 12:12:19,458 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Version de l'application : 0.1a
+
+2013-06-09 12:12:19,458 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 12:12:19,459 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 12:12:19,459 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 12:12:19,466 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 12:12:19,466 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 12:12:19,467 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:12:19,467 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:12:19,508 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 12:12:19,597 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 12:12:19,825 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@13ea842, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@98aba5 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:12:19,826 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:12:19,877 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:12:20,046 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 12:12:20,046 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 12:12:20,056 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
+NullPointerException : null
+
+2013-06-09 12:12:20,257 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@39f7ce, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1bbf893 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:12:20,257 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:12:20,317 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:12:23,531 - [ERROR] - from application in play-akka.actor.default-dispatcher-11 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 12:12:23,532 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\n  if (meta.id)\n  {\n     emit(meta.id, doc);\n  }\n}"}}}
+
+2013-06-09 12:12:23,532 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@15d98f4, beer-sample=models.OrangeBucket@1e4f865}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@16fc045}
+
+2013-06-09 12:12:23,532 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:12:23,533 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:12:23,536 - [ERROR] - from application in play-akka.actor.default-dispatcher-11 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-09 12:12:23,537 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-09 12:12:23,537 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-09 12:12:23,537 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@15d98f4, beer-sample=models.OrangeBucket@1e4f865}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@16fc045}}}
+
+2013-06-09 12:12:23,538 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@15d98f4, beer-sample=models.OrangeBucket@1e4f865}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@16fc045}}}
+
+2013-06-09 12:12:27,149 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+before each request... Request : GET /contextViewer/true Action : index
+
+2013-06-09 12:12:27,150 - [DEBUG] - from application in play-akka.actor.default-dispatcher-8 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@15d98f4, beer-sample=models.OrangeBucket@1e4f865}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@16fc045}}}
+
+2013-06-09 12:12:30,344 - [DEBUG] - from application in play-akka.actor.default-dispatcher-11 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 12:12:33,235 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+before each request... Request : GET /document/localhost/saslBucket/key1 Action : index
+
+2013-06-09 12:12:33,330 - [DEBUG] - from application in play-akka.actor.default-dispatcher-14 
+Document Key : key1 - Document Content : null trouvé !!!
+
+2013-06-09 12:22:38,375 - [INFO] - from application in New I/O worker #6 
+Application shutdown...
+
+2013-06-09 12:22:38,579 - [INFO] - from application in New I/O worker #6 
+Application has started
+
+2013-06-09 12:22:38,579 - [DEBUG] - from application in New I/O worker #6 
+Lecture du fichier properties 'configuration.properties' de configuration
+
+2013-06-09 12:22:38,585 - [DEBUG] - from application in New I/O worker #6 
+Version de l'application : 0.1a
+
+2013-06-09 12:22:38,585 - [DEBUG] - from application in New I/O worker #6 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 12:22:38,586 - [DEBUG] - from application in New I/O worker #6 
+Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'
+
+2013-06-09 12:22:38,591 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 12:22:38,595 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 12:22:38,603 - [DEBUG] - from application in New I/O worker #6 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 12:22:38,604 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 12:22:38,609 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:22:38,609 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:22:38,661 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 12:22:38,736 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 12:22:38,960 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@554300, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1a1de34 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:22:38,966 - [DEBUG] - from application in New I/O worker #6 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:22:39,041 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:22:39,218 - [DEBUG] - from application in New I/O worker #6 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 12:22:39,218 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 12:22:39,233 - [INFO] - from application in New I/O worker #6 
+NullPointerException : null
+
+2013-06-09 12:22:39,431 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@1bf2a45, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1704a25 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:22:39,432 - [DEBUG] - from application in New I/O worker #6 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:22:39,486 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:22:42,692 - [ERROR] - from application in New I/O worker #6 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 12:22:42,692 - [DEBUG] - from application in New I/O worker #6 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-09 12:22:42,693 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1ce59cc, beer-sample=models.OrangeBucket@697271}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@d879c0}
+
+2013-06-09 12:22:42,693 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:22:42,693 - [DEBUG] - from application in New I/O worker #6 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:22:42,697 - [ERROR] - from application in New I/O worker #6 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-09 12:22:42,697 - [DEBUG] - from application in New I/O worker #6 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-09 12:22:42,697 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-09 12:22:42,698 - [DEBUG] - from application in New I/O worker #6 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1ce59cc, beer-sample=models.OrangeBucket@697271}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@d879c0}}}
+
+2013-06-09 12:22:42,699 - [INFO] - from play in New I/O worker #6 
+Application started (Dev)
+
+2013-06-09 12:22:42,721 - [DEBUG] - from application in play-akka.actor.default-dispatcher-9 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 12:23:55,126 - [DEBUG] - from application in play-akka.actor.default-dispatcher-15 
+before each request... Request : GET /document/localhost/saslBucket/key1 Action : index
+
+2013-06-09 12:23:55,201 - [DEBUG] - from application in play-akka.actor.default-dispatcher-15 
+Document Key : key1 - Document Content : null trouvé !!!
+
+2013-06-09 12:24:51,890 - [DEBUG] - from application in play-akka.actor.default-dispatcher-17 
+before each request... Request : GET /contextViewer/true Action : index
+
+2013-06-09 12:24:51,892 - [DEBUG] - from application in play-akka.actor.default-dispatcher-20 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1ce59cc, beer-sample=models.OrangeBucket@697271}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@d879c0}}}
+
+2013-06-09 12:25:10,063 - [DEBUG] - from application in play-akka.actor.default-dispatcher-19 
+before each request... Request : GET /contextViewer/true Action : index
+
+2013-06-09 12:25:10,065 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1ce59cc, beer-sample=models.OrangeBucket@697271}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@d879c0}}}
+
+2013-06-09 12:25:12,718 - [DEBUG] - from application in play-akka.actor.default-dispatcher-19 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 12:25:14,670 - [DEBUG] - from application in play-akka.actor.default-dispatcher-22 
+before each request... Request : GET /document/localhost/saslBucket/key1 Action : index
+
+2013-06-09 12:25:14,742 - [DEBUG] - from application in play-akka.actor.default-dispatcher-22 
+Document Key : key1 - Document Content : null trouvé !!!
+
+2013-06-09 12:25:34,516 - [DEBUG] - from application in play-akka.actor.default-dispatcher-21 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 12:25:36,775 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+before each request... Request : GET /cluster/localhost Action : index
+
+2013-06-09 12:25:45,393 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+before each request... Request : GET /contextViewer/false Action : index
+
+2013-06-09 12:25:45,395 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Version de l'application : 0.1a
+
+2013-06-09 12:25:45,395 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 12:25:45,395 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 12:25:45,396 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 12:25:45,398 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 12:25:45,398 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 12:25:45,398 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:25:45,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:25:45,432 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 12:25:45,495 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 12:25:45,683 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@fbe81, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1a424ee isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:25:45,684 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:25:45,739 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:25:45,913 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 12:25:45,914 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 12:25:45,928 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
+NullPointerException : null
+
+2013-06-09 12:25:46,137 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@18fc3d4, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@181bc1a isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:25:46,138 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:25:46,197 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:25:49,398 - [ERROR] - from application in play-akka.actor.default-dispatcher-25 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 12:25:49,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-09 12:25:49,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@109d891, beer-sample=models.OrangeBucket@1694021}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@f13e6e}
+
+2013-06-09 12:25:49,399 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:25:49,400 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:25:49,403 - [ERROR] - from application in play-akka.actor.default-dispatcher-25 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-09 12:25:49,403 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-09 12:25:49,404 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-09 12:25:49,404 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@109d891, beer-sample=models.OrangeBucket@1694021}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@f13e6e}}}
+
+2013-06-09 12:25:49,404 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@109d891, beer-sample=models.OrangeBucket@1694021}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@f13e6e}}}
+
+2013-06-09 12:26:28,018 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+before each request... Request : GET /contextViewer/true Action : index
+
+2013-06-09 12:26:28,022 - [DEBUG] - from application in play-akka.actor.default-dispatcher-25 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@109d891, beer-sample=models.OrangeBucket@1694021}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@f13e6e}}}
+
+2013-06-09 12:38:53,257 - [INFO] - from application in New I/O worker #1 
+Application shutdown...
+
+2013-06-09 12:38:53,431 - [INFO] - from application in New I/O worker #1 
+Application has started
+
+2013-06-09 12:38:53,431 - [DEBUG] - from application in New I/O worker #1 
+Lecture du fichier properties 'configuration.properties' de configuration
+
+2013-06-09 12:38:53,435 - [DEBUG] - from application in New I/O worker #1 
+Version de l'application : 0.1a
+
+2013-06-09 12:38:53,436 - [DEBUG] - from application in New I/O worker #1 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 12:38:53,436 - [DEBUG] - from application in New I/O worker #1 
+Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'
+
+2013-06-09 12:38:53,440 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 12:38:53,445 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 12:38:53,453 - [DEBUG] - from application in New I/O worker #1 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 12:38:53,454 - [DEBUG] - from application in New I/O worker #1 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 12:38:53,456 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:38:53,457 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:38:53,498 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 12:38:53,566 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 12:38:53,765 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@ddd13, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@2d3caf isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:38:53,766 - [DEBUG] - from application in New I/O worker #1 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:38:53,821 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:38:53,997 - [DEBUG] - from application in New I/O worker #1 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 12:38:53,998 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 12:38:54,009 - [INFO] - from application in New I/O worker #1 
+NullPointerException : null
+
+2013-06-09 12:38:54,213 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@e52f8c, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@94bbdf isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 12:38:54,215 - [DEBUG] - from application in New I/O worker #1 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 12:38:54,269 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 12:38:57,474 - [ERROR] - from application in New I/O worker #1 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 12:38:57,474 - [DEBUG] - from application in New I/O worker #1 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-09 12:38:57,475 - [DEBUG] - from application in New I/O worker #1 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@db566f, beer-sample=models.OrangeBucket@7a86a}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@c202a9}
+
+2013-06-09 12:38:57,475 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 12:38:57,475 - [DEBUG] - from application in New I/O worker #1 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 12:38:57,479 - [ERROR] - from application in New I/O worker #1 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-09 12:38:57,479 - [DEBUG] - from application in New I/O worker #1 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-09 12:38:57,479 - [DEBUG] - from application in New I/O worker #1 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-09 12:38:57,479 - [DEBUG] - from application in New I/O worker #1 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@db566f, beer-sample=models.OrangeBucket@7a86a}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@c202a9}}}
+
+2013-06-09 12:38:57,480 - [INFO] - from play in New I/O worker #1 
+Application started (Dev)
+
+2013-06-09 12:38:57,506 - [DEBUG] - from application in play-akka.actor.default-dispatcher-31 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 12:39:02,146 - [DEBUG] - from application in play-akka.actor.default-dispatcher-31 
+before each request... Request : GET /document/localhost/saslBucket/key1 Action : index
+
+2013-06-09 12:40:59,227 - [DEBUG] - from application in play-akka.actor.default-dispatcher-31 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 12:41:00,728 - [DEBUG] - from application in play-akka.actor.default-dispatcher-41 
+before each request... Request : GET /document/localhost/saslBucket/key3 Action : index
+
+2013-06-09 13:04:14,540 - [INFO] - from application in New I/O worker #3 
+Application shutdown...
+
+2013-06-09 13:04:14,730 - [INFO] - from application in New I/O worker #3 
+Application has started
+
+2013-06-09 13:04:14,730 - [DEBUG] - from application in New I/O worker #3 
+Lecture du fichier properties 'configuration.properties' de configuration
+
+2013-06-09 13:04:14,741 - [DEBUG] - from application in New I/O worker #3 
+Version de l'application : 0.1a
+
+2013-06-09 13:04:14,741 - [DEBUG] - from application in New I/O worker #3 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 13:04:14,742 - [DEBUG] - from application in New I/O worker #3 
+Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'
+
+2013-06-09 13:04:14,746 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 13:04:14,752 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 13:04:14,760 - [DEBUG] - from application in New I/O worker #3 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 13:04:14,761 - [DEBUG] - from application in New I/O worker #3 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 13:04:14,771 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 13:04:14,771 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 13:04:14,818 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 13:04:14,896 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 13:04:15,077 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@12739, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1b61971 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 13:04:15,078 - [DEBUG] - from application in New I/O worker #3 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 13:04:15,138 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 13:04:15,306 - [DEBUG] - from application in New I/O worker #3 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 13:04:15,306 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 13:04:15,317 - [INFO] - from application in New I/O worker #3 
+NullPointerException : null
+
+2013-06-09 13:04:15,521 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@f60129, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@c63164 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 13:04:15,521 - [DEBUG] - from application in New I/O worker #3 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 13:04:15,585 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 13:04:18,792 - [ERROR] - from application in New I/O worker #3 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 13:04:18,792 - [DEBUG] - from application in New I/O worker #3 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-09 13:04:18,792 - [DEBUG] - from application in New I/O worker #3 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@169745c, beer-sample=models.OrangeBucket@567a15}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@168fe00}
+
+2013-06-09 13:04:18,793 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 13:04:18,793 - [DEBUG] - from application in New I/O worker #3 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 13:04:18,796 - [ERROR] - from application in New I/O worker #3 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-09 13:04:18,796 - [DEBUG] - from application in New I/O worker #3 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-09 13:04:18,797 - [DEBUG] - from application in New I/O worker #3 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-09 13:04:18,797 - [DEBUG] - from application in New I/O worker #3 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@169745c, beer-sample=models.OrangeBucket@567a15}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@168fe00}}}
+
+2013-06-09 13:04:18,797 - [INFO] - from play in New I/O worker #3 
+Application started (Dev)
+
+2013-06-09 13:04:18,829 - [DEBUG] - from application in play-akka.actor.default-dispatcher-41 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 13:23:34,543 - [INFO] - from application in New I/O worker #7 
+Application shutdown...
+
+2013-06-09 13:23:34,787 - [INFO] - from application in New I/O worker #7 
+Application has started
+
+2013-06-09 13:23:34,792 - [DEBUG] - from application in New I/O worker #7 
+Lecture du fichier properties 'configuration.properties' de configuration
+
+2013-06-09 13:23:34,814 - [DEBUG] - from application in New I/O worker #7 
+Version de l'application : 0.1a
+
+2013-06-09 13:23:34,814 - [DEBUG] - from application in New I/O worker #7 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 13:23:34,814 - [DEBUG] - from application in New I/O worker #7 
+Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'
+
+2013-06-09 13:23:34,833 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 13:23:34,841 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 13:23:34,862 - [DEBUG] - from application in New I/O worker #7 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 13:23:34,863 - [DEBUG] - from application in New I/O worker #7 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 13:23:34,867 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 13:23:34,868 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 13:23:34,917 - [DEBUG] - from application in New I/O worker #7 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 13:23:35,012 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 13:23:35,350 - [DEBUG] - from application in New I/O worker #7 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@15bc9f7, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1289072 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 13:23:35,354 - [DEBUG] - from application in New I/O worker #7 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:35,413 - [DEBUG] - from application in New I/O worker #7 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:35,586 - [DEBUG] - from application in New I/O worker #7 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 13:23:35,586 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 13:23:35,600 - [INFO] - from application in New I/O worker #7 
+NullPointerException : null
+
+2013-06-09 13:23:35,910 - [DEBUG] - from application in New I/O worker #7 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@6a77cf, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1dfda20 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 13:23:35,910 - [DEBUG] - from application in New I/O worker #7 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:35,985 - [DEBUG] - from application in New I/O worker #7 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:39,199 - [ERROR] - from application in New I/O worker #7 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 13:23:39,199 - [DEBUG] - from application in New I/O worker #7 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-09 13:23:39,200 - [DEBUG] - from application in New I/O worker #7 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1c85822, beer-sample=models.OrangeBucket@12221e}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@7e0bb7}
+
+2013-06-09 13:23:39,200 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 13:23:39,200 - [DEBUG] - from application in New I/O worker #7 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 13:23:39,205 - [ERROR] - from application in New I/O worker #7 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-09 13:23:39,205 - [DEBUG] - from application in New I/O worker #7 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-09 13:23:39,206 - [DEBUG] - from application in New I/O worker #7 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-09 13:23:39,207 - [DEBUG] - from application in New I/O worker #7 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@1c85822, beer-sample=models.OrangeBucket@12221e}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@7e0bb7}}}
+
+2013-06-09 13:23:39,208 - [INFO] - from play in New I/O worker #7 
+Application started (Dev)
+
+2013-06-09 13:23:39,246 - [DEBUG] - from application in play-akka.actor.default-dispatcher-47 
+before each request... Request : GET /contextViewer/false Action : index
+
+2013-06-09 13:23:39,251 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Version de l'application : 0.1a
+
+2013-06-09 13:23:39,252 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Chemin d 'accès du fichier de configuration des clusters Couchbase : public/configuration/contextClusterDescription.conf
+
+2013-06-09 13:23:39,252 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans le constructeur : OrangeClusterManager()
+
+2013-06-09 13:23:39,253 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans le constructeur : ClustersDAO()
+
+2013-06-09 13:23:39,255 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+[ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'}, ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}]
+
+2013-06-09 13:23:39,255 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie du constructeur ClustersDAO() avec comme propriétés : ClustersDAO{clusterDAOList=ClusterDAO{id='localhost', label='OrangeCluster local n°1', uri='http://localhost:8091/pools/', loginAdm='Administrator', passwdAdm='Administrator'},ClusterDAO{id='localhost2', label='OrangeCluster local n°2', uri='http://localhost:8092/pools/', loginAdm='Administrator', passwdAdm='Administrator'}}
+
+2013-06-09 13:23:39,255 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost', label : 'OrangeCluster local n°1', uri : 'http://localhost:8091/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 13:23:39,256 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 13:23:39,297 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie de la méthode : setClusterManager() avec status = connected
+
+2013-06-09 13:23:39,374 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans la méthode : getCouchbaseClient(bucketName beer-sample)
+
+2013-06-09 13:23:39,623 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@1692818, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@c76a70 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 13:23:39,625 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:39,693 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:39,890 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"},"document_content":{"map":"function (doc, meta) {\nif (meta.id)\n\temit(meta.id, doc)\n           }"}}}
+
+2013-06-09 13:23:39,890 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans la méthode : getCouchbaseClient(bucketName saslBucket)
+
+2013-06-09 13:23:39,902 - [INFO] - from application in play-akka.actor.default-dispatcher-48 
+NullPointerException : null
+
+2013-06-09 13:23:40,188 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie de la méthode : getCouchbaseClient() avec couchbaseClient = Failure Mode: Redistribute, Hash Algorithm: NATIVE_HASH Max Reconnect Delay: 30, Max Op Timeout: 2500, Op Queue Length: 16384, Op Max Queue Block Time10000, Max Timeout Exception Threshold: 998, Read Buffer Size: 16384, Transcoder: net.spy.memcached.transcoders.SerializingTranscoder@1d8e17a, Operation Factory: net.spy.memcached.protocol.binary.BinaryOperationFactory@1bb3b97 isDaemon: false, Optimized: false, Using Nagle: false, ConnectionFactory: BinaryConnectionFactory
+
+2013-06-09 13:23:40,188 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entrée dans la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:40,254 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie de la méthode createDisplayDesignDocument().
+
+2013-06-09 13:23:43,458 - [ERROR] - from application in play-akka.actor.default-dispatcher-48 
+Impossible de créer le DesignDocument display!
+
+2013-06-09 13:23:43,458 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Contenu du Design Document : {"language":"javascript","views":{"all_keys":{"map":"function (doc, meta) {\n  emit(meta.id, null);\n}"}}}
+
+2013-06-09 13:23:43,459 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@186902f, beer-sample=models.OrangeBucket@16430b5}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@b9c712}
+
+2013-06-09 13:23:43,459 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans le constructeur : OrangeCluster(id : 'localhost2', label : 'OrangeCluster local n°2', uri : 'http://localhost:8092/pools/', loginAdm : 'Administrator', passwdAdm : 'Administrator')
+
+2013-06-09 13:23:43,459 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Entreé dans la méthode : setClusterManager()
+
+2013-06-09 13:23:43,464 - [ERROR] - from application in play-akka.actor.default-dispatcher-48 
+class java.lang.RuntimeException : Http Error: 404 Reason: Object Not Found Details: No reason given
+
+2013-06-09 13:23:43,464 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie de la méthode : setClusterManager() avec status = notConnected
+
+2013-06-09 13:23:43,465 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie du constructeur : OrangeCluster(String id, String label, String uri, String loginAdm, String passwdAdm) avec comme propriétés : OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}
+
+2013-06-09 13:23:43,465 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+Sortie du constructeur OrangeClusterManager() avec comme propriétés : OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@186902f, beer-sample=models.OrangeBucket@16430b5}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@b9c712}}}
+
+2013-06-09 13:23:43,466 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+OrangeClusterManager{clusterMap={localhost2=OrangeCluster{bucketMap={}, id='localhost2', label='OrangeCluster local n°2', loginAdm='Administrator', passwdAdm='Administrator', status='notConnected', uriList=[http://localhost:8092/pools/], clusterManager=null}, localhost=OrangeCluster{bucketMap={saslBucket=models.OrangeBucket@186902f, beer-sample=models.OrangeBucket@16430b5}, id='localhost', label='OrangeCluster local n°1', loginAdm='Administrator', passwdAdm='Administrator', status='connected', uriList=[http://localhost:8091/pools/], clusterManager=com.couchbase.client.ClusterManager@b9c712}}}
+
+2013-06-09 13:23:48,298 - [DEBUG] - from application in play-akka.actor.default-dispatcher-48 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 13:24:15,251 - [DEBUG] - from application in play-akka.actor.default-dispatcher-49 
+before each request... Request : POST /document/localhost/saslBucket/key6/My+insertion+test Action : addDocument
+
+2013-06-09 13:24:56,468 - [DEBUG] - from application in play-akka.actor.default-dispatcher-52 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
+
+2013-06-09 13:25:00,497 - [DEBUG] - from application in play-akka.actor.default-dispatcher-55 
+before each request... Request : GET /document/localhost/saslBucket/key6 Action : index
+
+2013-06-09 13:25:05,394 - [DEBUG] - from application in play-akka.actor.default-dispatcher-53 
+before each request... Request : GET /bucket/localhost/saslBucket Action : index
 

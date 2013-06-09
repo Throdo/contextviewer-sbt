@@ -20,11 +20,11 @@ public class BucketController extends Controller {
     public static Result index(String idCluster, String idBucket) {
         String version = ApplicationConfigurationHandler.getinstance().getApplicationVersion();
 
-        OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getinstance();
+        OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getInstance();
         OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(idCluster);
         OrangeBucket orangeBucket = orangeCluster.getBucketMap().get(idBucket);
 
-        orangeBucket.fillBucketWithDocuments();
+        orangeBucket.getAllDocumentKeys();
 
         return ok(bucketView.render(version, idCluster, orangeBucket));
     }

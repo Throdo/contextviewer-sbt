@@ -18,7 +18,7 @@ public class OrangeClusterManagerHandler {
      *
      * @return
      */
-    public static OrangeClusterManager getinstance() {
+    public static OrangeClusterManager getInstance() {
         if (null == instance) {
             // Premier appel
             instance = new OrangeClusterManager();

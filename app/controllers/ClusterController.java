@@ -18,7 +18,7 @@ public class ClusterController extends Controller {
     public static Result index(String id) {
         String version = ApplicationConfigurationHandler.getinstance().getApplicationVersion();
 
-        OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getinstance();
+        OrangeClusterManager orangeClusterManager = OrangeClusterManagerHandler.getInstance();
         OrangeCluster orangeCluster = orangeClusterManager.getClusterMap().get(id);
 
         return ok(clusterView.render(version, orangeCluster));

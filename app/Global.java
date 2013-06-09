@@ -40,7 +40,7 @@ public class Global extends GlobalSettings {
         ApplicationConfigurationHandler.getinstance();
 
         Logger.debug("Récupération des informations sur les clusters disponibles à partir du fichier de configuration 'contextClusterDescription.conf'");
-        OrangeClusterManagerHandler.getinstance();
+        OrangeClusterManagerHandler.getInstance();
 
     }
 

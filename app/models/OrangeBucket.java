@@ -5,7 +5,6 @@ import com.couchbase.client.protocol.views.*;
 import play.Logger;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -37,18 +36,36 @@ public class OrangeBucket {
     private CouchbaseClient couchbaseClient;
     private Map<String, OrangeDocument> orangeDocuments;
     private DesignDocument displayDesignDocument;
-    private ViewDesign allKeyView;
-    //TODO C'est dégueulasse de mettre le status à connected ou notConnected. Utiliser un booléen et laisser la partie view le transformer dans la bonne classe CSS.
+    private View allKeyView;
+    private View documentContentView;
     private String status;
 
     // Constructeur(s)
+    //TODO C'est dégueulasse de mettre le status à connected ou notConnected. Utiliser un booléen et laisser la partie view le transformer dans la bonne classe CSS.
     public OrangeBucket(String id, String label, CouchbaseClient couchbaseClient) {
         this.id = id;
         this.label = label;
         this.couchbaseClient = couchbaseClient;
-        // A changer cf. le "à faire" ci-dessus
-        this.status = (setDisplayDesignDocument() ? "connected" : "notConnected");
+
+        getBucketInformation();
+
         this.orangeDocuments = new HashMap<String, OrangeDocument>();
+    }
+
+    public View getDocumentContentView() {
+        return documentContentView;
+    }
+
+    public void setDocumentContentView(View documentContentView) {
+        this.documentContentView = documentContentView;
+    }
+
+    public View getAllKeyView() {
+        return allKeyView;
+    }
+
+    public void setAllKeyView(View allKeyView) {
+        this.allKeyView = allKeyView;
     }
 
     // Getter(s) & Setter(s)
@@ -68,99 +85,8 @@ public class OrangeBucket {
         this.status = status;
     }
 
-    public boolean setDisplayDesignDocument() {
-        DesignDocument designDocument = null;
-        boolean excutionCode = false;
-
-        try {
-            designDocument = this.couchbaseClient.getDesignDocument(designDocName);
-            Logger.debug("Contenu du Design Document : " + designDocument.toJson());
-            this.displayDesignDocument = designDocument;
-            excutionCode = true;
-        } catch (InvalidViewException e) {
-            Logger.info("Impossible de trouver le DesignDocument 'display'. Il faut le créer !");
-            try {
-                createDesignDocument(allKeyViewCode);
-            } catch (Exception e1) {
-                e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-        }
-
-        if (excutionCode) {
-            List<ViewDesign> views = (List<ViewDesign>) designDocument.getViews();
-            ViewDesign viewDesign = new ViewDesign(allKeysViewName, allKeyViewCode);
-            if (views.contains(viewDesign)) {
-                int index = views.indexOf(viewDesign);
-                this.allKeyView = views.get(index);
-            }
-        }
-        return excutionCode;
-    }
-
-    private void createDocumentContentView() throws Exception {
-
-        ViewDesign documentContentView = new ViewDesign(
-                documentContentViewName,
-                documentContentViewCode);
-
-        this.displayDesignDocument.setView(documentContentView);
-
-    }
-
-    private void createDesignDocument(String jsonCodeView) throws Exception {
-        DesignDocument designDocument;
-
-        ViewDesign allKeys = new ViewDesign(
-                allKeysViewName,
-                jsonCodeView);
-
-        designDocument = new DesignDocument(designDocName);
-        designDocument.setView(allKeys);
-
-        if (!this.couchbaseClient.createDesignDoc(designDocument)) {
-            throw new Exception("Impossible de créer le DesignDocument " + designDocName + "!");
-        }
-
-        // TODO améliorer ce code pourri. Il faut un certain temps pour que le DesignDocument soit créer. Système de Synchronisation à mettre en place.
-        boolean foundDesignDoc = false;
-        int cpt = 0;
-        while (!foundDesignDoc) {
-            try {
-                cpt++;
-                this.couchbaseClient.getDesignDocument(designDocName);
-                foundDesignDoc = true;
-                Logger.debug("Création du DesignDocument " + designDocName + "!");
-                this.createDocumentContentView();
-            } catch (Exception e1) {
-                Thread.sleep(500);
-                if (cpt > 5) {
-                    throw new Exception("Impossible de créer le DesignDocument " + designDocName + "!");
-                }
-            }
-        }
-    }
-
-    public void fillBucketWithDocuments() {
-        // Create connection if needed
-
-        try {
-            View view = this.couchbaseClient.getView(designDocName, allKeysViewName);
-            Query query = new Query();
-            query.setIncludeDocs(true).setLimit(20);
-            query.setStale(Stale.FALSE);
-            ViewResponse result = this.couchbaseClient.query(view, query);
-
-            for (ViewRow row : result) {
-                String key = row.getKey(); // deal with the document/data
-                String value = row.getValue(); // deal with the document/data
-
-                OrangeDocument document = new OrangeDocument(key, null);
-                this.orangeDocuments.put(key, document);
-
-            }
-        } catch (InvalidViewException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+    public static String getDesignDocName() {
+        return designDocName;
     }
 
     public Map<String, OrangeDocument> getOrangeDocuments() {
@@ -195,33 +121,230 @@ public class OrangeBucket {
         this.couchbaseClient = couchbaseClient;
     }
 
-    public void refreshBucketInformations() {
-        this.status = (setDisplayDesignDocument() ? "connected" : "notConnected");
+    /**
+     * Retourne true si le DesignDocument existe dans le cluster, false sinon.
+     *
+     * @return boolean
+     */
+    private boolean isDisplayDesignDocument(String designDocName) {
+        boolean returnValue = false;
+
+        try {
+            this.couchbaseClient.getDesignDocument(designDocName);
+            returnValue = true;
+        } catch (InvalidViewException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return returnValue;
     }
 
-    private OrangeDocument fillDocumentContent(String idDocument) {
+    /**
+     * Méthode qui remplie les propriétés de l'objet Bucket par rapport à l'existant dans le cluster
+     * Si les propriétés n'existent pas alors il les crée.
+     * <p/>
+     * Test le DesignDocument et le crée si il n'existe pas.
+     * Puis s'occupe des vues (All_Keys et Document_Content)
+     */
+    private void getBucketInformation() {
+        if (getDisplayDesignDocument() == null) {
+            this.displayDesignDocument = createDisplayDesignDocument(designDocName);
+        }
+
+        if (this.displayDesignDocument != null) {
+            if (getAllKeyView() == null) {
+                this.allKeyView = createAllKeysView();
+            }
+
+            if (getDocumentContentView() == null) {
+                this.documentContentView = createDocumentContentView();
+            }
+
+            Logger.debug("Contenu du Design Document : " + this.displayDesignDocument.toJson());
+
+            this.status = "connected";
+        } else {
+            this.status = "notConnected";
+        }
+    }
+
+
+    /**
+     * Retourne true si la vue en paramètre existe dans le cluster, false sinon.
+     *
+     * @return boolean
+     */
+    private boolean isViewExists(String viewName) {
+        boolean returnValue = false;
+
+        try {
+            this.couchbaseClient.getView(designDocName, viewName);
+            returnValue = true;
+        } catch (InvalidViewException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return returnValue;
+    }
+
+    /**
+     * Retourne true si la vue Document_Content existe dans le cluster, false sinon.
+     *
+     * @return boolean
+     */
+    private boolean isDocumentContextView() {
+        return (isViewExists(documentContentViewName));
+    }
+
+    /**
+     * Retourne true si la vue All_Key existe dans le cluster, false sinon.
+     *
+     * @return boolean
+     */
+    private boolean isAllKeyView() {
+        return (isViewExists(allKeysViewName));
+    }
+
+    /**
+     * Crée le DesignDocument si il n'existe pas. Retourne le DesignDocument si il existe
+     *
+     * @return DesignDocument si la création est ok, null sinon.
+     */
+    private DesignDocument createDisplayDesignDocument(String designDocName) {
+
+        DesignDocument designDocument;
+
+        Logger.debug("Entrée dans la méthode createDisplayDesignDocument().");
+
+        if (isDisplayDesignDocument(designDocName)) {
+            designDocument = this.couchbaseClient.getDesignDocument(designDocName);
+        } else {
+            designDocument = new DesignDocument(designDocName);
+
+            ViewDesign viewDesign = new ViewDesign(allKeysViewName, allKeyViewCode);
+            designDocument.setView(viewDesign);
+
+            if (this.couchbaseClient.createDesignDoc(designDocument)) {
+                designDocument = this.couchbaseClient.getDesignDocument(designDocName);
+            } else {
+                Logger.warn("Impossible de créer le DesignDocument " + designDocName);
+                designDocument = null;
+            }
+        }
+
+/*      TODO améliorer ce code pourri. Il faut un certain temps pour que le DesignDocument soit créer. Système de Synchronisation à mettre en place.
+        boolean foundDesignDoc = false;
+        int cpt = 0;
+        while (!foundDesignDoc) {
+            try {
+                cpt++;
+                this.displayDesignDocument = this.couchbaseClient.getDesignDocument(designDocName);
+                foundDesignDoc = true;
+                Logger.debug("Création du DesignDocument " + designDocName + "!");
+                this.createDocumentContentView();
+            } catch (Exception e1) {
+                Thread.sleep(500);
+                if (cpt > 5) {
+                    throw new Exception("Impossible de créer le DesignDocument " + designDocName + "!");
+                }
+            }
+        }*/
+
+        Logger.debug("Sortie de la méthode createDisplayDesignDocument().");
+
+        return designDocument;
+    }
+
+    private View createView(String viewName, String viewCode) {
+        View view = null;
+
+        if (isViewExists(viewName)) {
+            view = this.couchbaseClient.getView(designDocName, viewName);
+        } else {
+            DesignDocument designDocument = new DesignDocument(designDocName);
+
+            ViewDesign viewDesign = new ViewDesign(viewName, viewCode);
+            designDocument.setView(viewDesign);
+
+            //TODO améliorer ce code pourri. Il faut un certain temps pour que le DesignDocument soit créer. Système de Synchronisation à mettre en place.
+            boolean foundDesignDoc = false;
+            int cpt = 0;
+            while (!foundDesignDoc) {
+                try {
+                    cpt++;
+                    view = this.couchbaseClient.getView(designDocName, viewName);
+                    foundDesignDoc = true;
+                    Logger.debug("Création de la vue " + viewName + "!");
+                } catch (Exception e1) {
+                    try {
+                        Thread.sleep(500);
+                        if (cpt > 5) {
+                            Logger.error("Impossible de créer le DesignDocument " + designDocName + "!");
+                            foundDesignDoc = true;
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+                }
+            }
+
+        }
+
+        return view;
+    }
+
+    private View createAllKeysView() {
+        return (createView(allKeysViewName, allKeyViewCode));
+    }
+
+    private View createDocumentContentView() {
+        return (createView(documentContentViewName, documentContentViewCode));
+
+    }
+
+    public void refreshBucketInformations() {
+        getBucketInformation();
+    }
+
+    /**
+     * Méthode qui récupère toutes les clés des documents stockés dans le Bucket en utilisant la vue All_Keys qui doit être créee.
+     */
+    public void getAllDocumentKeys() {
+        try {
+            Query query = new Query();
+            query.setIncludeDocs(true).setLimit(20);
+            query.setStale(Stale.FALSE);
+            ViewResponse result = this.couchbaseClient.query(this.allKeyView, query);
+
+            for (ViewRow row : result) {
+                String key = row.getKey(); // deal with the document/data
+
+                OrangeDocument document = new OrangeDocument(key, null);
+                this.orangeDocuments.put(key, document);
+            }
+        } catch (InvalidViewException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    private OrangeDocument getDocumentContentFromId(String idDocument) {
         OrangeDocument documentFound = null;
 
         try {
-            View view = this.couchbaseClient.getView(designDocName, documentContentViewName);
             Query query = new Query();
             query.setKey(idDocument);
             query.setIncludeDocs(true).setLimit(20);
             query.setStale(Stale.FALSE);
-            ViewResponse result = this.couchbaseClient.query(view, query);
+            ViewResponse result = this.couchbaseClient.query(this.allKeyView, query);
 
             for (ViewRow row : result) {
                 String key = row.getKey(); // deal with the document/data
                 String value = row.getValue(); // deal with the document/data
 
-                DesignDocument document = (DesignDocument) row.getDocument();
-
                 documentFound = new OrangeDocument(key, value);
                 this.orangeDocuments.put(key, documentFound);
 
                 Logger.debug("Document Key : " + key + " - Document Content : " + value + " trouvé !!!");
-                Logger.debug("Document Content en Json : " + document.toJson());
-
             }
         } catch (InvalidViewException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -230,16 +353,17 @@ public class OrangeBucket {
         return documentFound;
     }
 
+    public OrangeDocument setOrangeDocumentContent(String idDocument, String valueDocument) {
+
+        OrangeDocument orangeDocument = new OrangeDocument(idDocument, valueDocument);
+        this.getCouchbaseClient().set(idDocument, valueDocument);
+
+        return orangeDocument;  //To change body of created methods use File | Settings | File Templates.
+    }
+
     public OrangeDocument getOrangeDocumentContent(String idDocument) {
-        OrangeDocument foundDocument;
-        if (this.orangeDocuments.containsKey(idDocument)) {
-            foundDocument = this.orangeDocuments.get(idDocument);
-            if (foundDocument.getContent() == null) {
-                foundDocument = this.fillDocumentContent(idDocument);
-            }
-        } else {
-            foundDocument = this.fillDocumentContent(idDocument);
-        }
+
+        OrangeDocument foundDocument = new OrangeDocument(idDocument, (String) this.getCouchbaseClient().get(idDocument));
 
         return foundDocument;  //To change body of created methods use File | Settings | File Templates.
     }

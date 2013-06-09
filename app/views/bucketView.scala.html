@@ -22,6 +22,16 @@
             }
             <div class="sweeper" />
         </div>
+        <div class="addDocument">
+            <form name="addDocument" action="@routes.DocumentController.addDocument(idCluster, bucket.getId(), "key6", "My insertion test")" method="post">
+
+                Key: <input type="text" name="key"><br>
+                Value: <input type="text" name="value">
+                <input type="submit" value="Submit">
+            </form>
+            <a href="@routes.DocumentController.addDocument(idCluster, bucket.getId(), "key6", "My insertion test")">
+                Ajouter un élément au bucket</a>
+        </div>
         <a href="@routes.ClusterController.index(idCluster)">Retour à la vue Cluster</a>
 
     </body>

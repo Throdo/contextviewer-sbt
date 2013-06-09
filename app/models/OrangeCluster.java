@@ -102,7 +102,9 @@ public class OrangeCluster {
                     CouchbaseConnectionFactory(this.uriList, bucketName, password);
             couchbaseClientHandle = new CouchbaseClient(cf);
         } catch (IOException ex) {
-            Logger.info(ex.getMessage());
+            Logger.info("IOException : " + ex.getMessage());
+        } catch (NullPointerException ex) {
+            Logger.info("NullPointerException : " + ex.getMessage());
         }
         return couchbaseClientHandle;
     }
